@@ -35,17 +35,20 @@ class CategoryController extends Controller {
 //		]);
 
 		Category::create( $request->all() );
+
 		return redirect()->route( 'admin.categories.index' )
 		                 ->with( 'success', 'Категория успешно добавлена' );
 	}
 
 	public function show( $id ) {
 		$category = Category::findOrFail( $id );
+
 		return view( 'admin.categories.show', compact( 'category' ) );
 	}
 
 	public function edit( $id ) {
 		$categories = Category::find( $id );
+
 		return view( 'admin.categories.create', compact( 'categories' ) );
 	}
 
@@ -63,6 +66,7 @@ class CategoryController extends Controller {
 
 	public function destroy( $id ) {
 		Category::find( $id )->delete();
+
 		return redirect()->route( 'admin.categories.index' )
 		                 ->with( 'success', 'Категория удалена!' );
 	}
