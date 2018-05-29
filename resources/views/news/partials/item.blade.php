@@ -1,10 +1,13 @@
-
-@php($count = 0)
+@php($count = 1)
 @foreach ($posts as $post)
-    @if( $count % 3)
-        wide block
-    @endif
-    <div>
+
+    <div class="
+        @if( $count == 1 || $count == 7 )
+            col-lg-8
+        @else
+            col-lg-4
+        @endif
+            ">
         <a href="{{ route('admin.posts.show',$post->id) }}"
            class="text-dark font-weight-bold">{{$post->title or ""}}</a>
 

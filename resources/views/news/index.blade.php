@@ -11,8 +11,9 @@
         </div>
     @endif
 
-    @include('news.partials.item', ['posts' => $posts])
-
+    <div class="row">
+        @include('news.partials.item', ['posts' => $posts])
+    </div>
 
     {!! $posts->links() !!}
 
