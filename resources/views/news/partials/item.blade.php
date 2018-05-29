@@ -5,7 +5,7 @@
         <div class="mb-4 p-3 bg-white shadow-sm rounded item-test">
             <a href="{{ route('admin.posts.show',$post->id) }}"
                class="text-dark font-weight-bold">{{$post->title or ""}}</a>
-            <h6 class="d-inline-block small text-light bg-primary">Категория: <a href="{{ route('news.category', $post->category->slug ) }}"
+            <h6 class="d-inline-block small text-light bg-primary p-1"><a href="{{ route('news.category', $post->category->slug ) }}"
                                                        class="text-light p-1">{{ $post->category->title }}</a></h6>
 
             <div class="" style="color: #b0bbc5;">{{ $post->created_at->diffForHumans() }}</div>
