@@ -194,6 +194,9 @@
                 </div>
             </li>
             <li class="nav-item">
+                <a href="{{ route('home') }}" class="nav-link">Вернуться на сайт</a>
+            </li>
+            <li class="nav-item">
                 <a href="#" class="nav-link">{{ Auth::user()->nickname }}</a>
             </li>
             <li class="nav-item">
