@@ -10411,6 +10411,20 @@ a.text-dark:focus {
   }
 }
 
+body {
+  background: #fff;
+  padding-top: 80px;
+}
+
+.item-test {
+  min-height: 300px;
+}
+
+.shadow-sm {
+  -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+          box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
 .navbar-laravel {
   background-color: #fff;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);

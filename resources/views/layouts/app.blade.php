@@ -21,7 +21,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+<nav class="navbar navbar-expand-md navbar-light navbar-laravel fixed-top">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
@@ -73,10 +73,10 @@
 
 <div class="container">
     <div class="row">
-        <main class="main col-md-8">
+        <main class="main col-md-9">
             @yield('content')
         </main>
-        <aside class="aside col-md-4">
+        <aside class="aside col-md-3">
             @yield('sidebar')
         </aside>
     </div>

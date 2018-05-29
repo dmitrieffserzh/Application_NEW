@@ -37,3 +37,4 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'name' => 'admin'], f
 
 // FRONT
 Route::get('news', 'PostController@index')->name('news.index');
+Route::get('news/{any?}', 'PostController@index')->where('any','.*')->name('news.category');
