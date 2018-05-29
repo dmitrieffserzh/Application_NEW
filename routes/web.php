@@ -32,3 +32,8 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'name' => 'admin'], f
 	Route::resource('categories', 'CategoryController', [ 'as' => 'admin' ]);
 
 });
+
+
+
+// FRONT
+Route::get('news', 'PostController@index')->name('news.index');
