@@ -1,5 +1,9 @@
 @extends('layouts.administrator')
 
+@push('custom-scripts')
+    <script src="{{ asset('js/admin/components/image_uploader.js') }}"></script>
+@endpush
+
 @section('content')
     <!-- Breadcrumbs-->
     <ol class="breadcrumb">
@@ -67,6 +71,11 @@
                     <label class="form-check-label" for="published-0">
                         Скрыть
                     </label>
+                </div>
+
+
+                <div class="btn-file">
+                    <input id="image_input" type="file" name="image" class="profile-image__form-input">
                 </div>
 
                 <div class="form-group">

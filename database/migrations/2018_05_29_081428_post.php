@@ -20,6 +20,7 @@ class Post extends Migration
 		    $table->integer('author_id')->unsigned();
 		    $table->integer('category_id')->unsigned();
 		    $table->integer('published')->default(1);
+		    $table->string('image');
 		    $table->timestamps();
 	    });
     }

@@ -31,6 +31,9 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'name' => 'admin'], f
 	// CATEGORIES
 	Route::resource('categories', 'CategoryController', [ 'as' => 'admin' ]);
 
+
+	// IMAGE UPLOADER
+	Route::post('/upload_image', 'ImageController@upload_news_image')->name('admin.news.upload');
 });
 
 
