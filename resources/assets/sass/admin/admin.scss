@@ -7,6 +7,9 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 @import 'icons/fontawesome';
+@import 'icons/fa-solid';
+@import 'icons/fa-regular';
+@import 'icons/fa-brands';
 
 
 html {
@@ -88,7 +91,6 @@ body.fixed-nav {
 #mainNav .navbar-collapse .navbar-sidenav .nav-link-collapse:after {
   float: right;
   content: '\f107';
-  font-family: 'FontAwesome';
 }
 
 #mainNav .navbar-collapse .navbar-sidenav .nav-link-collapse.collapsed:after {
@@ -134,7 +136,6 @@ body.fixed-nav {
   width: auto;
   content: '\f105';
   border: none;
-  font-family: 'FontAwesome';
 }
 
 #mainNav .navbar-collapse .navbar-nav > .nav-item.dropdown > .nav-link .indicator {
