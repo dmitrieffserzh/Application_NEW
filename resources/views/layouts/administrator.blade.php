@@ -31,13 +31,13 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-            <li class="nav-item border-bottom border-secondary" data-toggle="tooltip" data-placement="right" title="Панель">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Панель">
                 <a class="nav-link" href="{{ route('admin.dashboard') }}">
                     <i class="fas fa-home"></i>
                     <span class="nav-link-text">Главная</span>
                 </a>
             </li>
-            <li class="nav-item border-bottom border-secondary" data-toggle="tooltip" data-placement="right" title="Новости">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Новости">
                 <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents"
                    data-parent="#exampleAccordion">
                     <i class="fas fa-newspaper"></i>
@@ -45,17 +45,17 @@
                 </a>
                 <ul class="sidenav-second-level collapse" id="collapseComponents">
                     <li>
+                        <a href="{{ route('admin.posts.create') }}"><i class="fas fa-plus-circle"></i> Добавить новость</a>
+                    </li>
+                    <li>
                         <a href="{{ route('admin.posts.index') }}"><i class="fas fa-list"></i> Все новости</a>
                     </li>
                     <li>
                         <a href="{{ route('admin.categories.index') }}"><i class="fas fa-folder"></i> Категории</a>
                     </li>
-                    <li>
-                        <a href="{{ route('admin.posts.create') }}"><i class="fas fa-plus-circle"></i> Добавить новость</a>
-                    </li>
                 </ul>
             </li>
-            <li class="nav-item border-bottom border-secondary" data-toggle="tooltip" data-placement="right" title="Example Pages">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
                 <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages"
                    data-parent="#exampleAccordion">
                     <i class="fa fa-fw fa-file"></i>
@@ -76,7 +76,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="nav-item border-bottom border-secondary" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
                 <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti"
                    data-parent="#exampleAccordion">
                     <i class="fa fa-fw fa-sitemap"></i>
