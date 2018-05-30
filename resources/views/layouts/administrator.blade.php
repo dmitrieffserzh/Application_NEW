@@ -14,6 +14,7 @@
 
     <!-- Custom styles for this template-->
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     @stack('custom-styles')
     <script src="{{ asset('js/admin/admin.js') }}"></script>
     @stack('custom-scripts')
@@ -233,6 +234,8 @@
 <div class="content-wrapper">
     <div class="container-fluid">
         @yield('content')
+        <i class="fas fa-user"></i>
+        <i class="far fa-user"></i>
     </div>
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
