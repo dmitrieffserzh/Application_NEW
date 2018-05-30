@@ -2,7 +2,7 @@
 @foreach ($posts as $post)
 
     <div class="@if( $count == 1 || $count == 7 || $count == 11 ) col-lg-8 @else col-lg-4 @endif">
-        <div class="mb-4 bg-white shadow-sm rounded item-test">
+        <div class="mb-4 bg-white shadow-sm item-test">
             <img src="{{ getImage('news', $post->image) }}" width="100%">
             <div class="p-3
                     @if( $count == 1 || $count == 7 || $count == 11 )
@@ -13,7 +13,7 @@
                    class="text-dark font-weight-bold">{{$post->title or ""}}</a>
                 <h6 class="d-inline-block small text-light p-1" style="background: {{ $post->category->color }}"><a
                             href="{{ route('news.category', $post->category->slug ) }}"
-                            class="text-light p-1">{{ $post->category->title }}</a></h6>
+                            class="text-light p-1 font-weight-bold">{{ $post->category->title }}</a></h6>
 
                 <div class="" style="color: #b0bbc5;">{{ $post->created_at->diffForHumans() }}</div>
 
