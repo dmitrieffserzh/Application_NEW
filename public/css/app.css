@@ -10417,7 +10417,13 @@ body {
 }
 
 .item-test {
-  min-height: 300px;
+  position: relative;
+  min-height: 265px;
+  overflow: hidden;
+}
+
+.item-test .abs-pos {
+  top: 0;
 }
 
 .shadow-sm {

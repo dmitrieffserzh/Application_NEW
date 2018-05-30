@@ -18,10 +18,8 @@ class ImageController extends Controller {
 
 	public function upload_news_image(Request $request, $x = NULL, $y = NULL) {
 
-		$id = Auth::id();
-
 		$validator = Validator::make($request->all(), [
-			'image' => 'required|image|mimes:jpeg,jpg,png|max:10000000',
+			'image' => 'required|image|mimes:jpeg,jpg,png|max:2048',
 		]);
 
 		if ($validator->passes()) {
@@ -33,14 +31,12 @@ class ImageController extends Controller {
 			$destinationPath = public_path('uploads'.DIRECTORY_SEPARATOR.'images'.DIRECTORY_SEPARATOR.'news');
 			$img = Image::make($image->getRealPath());
 			// $img->crop(100, 100, 0, 0)->save($destinationPath.'/'.$input['image']);
-			$img->fit(100, 100)->save($destinationPath.DIRECTORY_SEPARATOR.$input['image']);
+			$img->fit(800, 400)->save($destinationPath.DIRECTORY_SEPARATOR.$input['image']);
 
 
 			// ORIGINAL
 			$destinationPath = public_path('uploads'.DIRECTORY_SEPARATOR.'images'.DIRECTORY_SEPARATOR.'news'.DIRECTORY_SEPARATOR.'originals');
 			$image->move($destinationPath, $input['image']);
-
-			Profile::find($id)->update(['avatar'=> $input['image']]);
 
 			return response()->json(['success'=>'done', 'url'=> $input['image'] ]);
 		}

@@ -33,7 +33,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'name' => 'admin'], f
 
 
 	// IMAGE UPLOADER
-	Route::post('/upload_image', 'ImageController@upload_news_image')->name('admin.news.upload');
+	Route::post('/upload', 'ImageController@upload_news_image')->name('admin.news.upload');
 });
 
 

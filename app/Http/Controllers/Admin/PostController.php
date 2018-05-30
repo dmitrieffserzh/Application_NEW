@@ -49,9 +49,10 @@ class PostController extends Controller {
 		$post->title       = $data['title'];
 		$post->content     = $data['content'];
 		$post->published   = $data['published'];
+		$post->image       = $data['image'];
 		$post->save();
 
-		return redirect()->route( 'admin.post.index' )
+		return redirect()->route( 'admin.posts.index' )
 		                 ->with( 'success', 'Новость успешно опубликована!' );
 
 	}

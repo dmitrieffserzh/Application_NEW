@@ -10,7 +10,7 @@ $(document).ready(function () {
 
         $.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-            url: '/image_upload',
+            url: url,
             data: form,
             cache: false,
             contentType: false,
@@ -18,19 +18,16 @@ $(document).ready(function () {
             type: 'POST',
             error: function (error) {
             },
-            success: function (msg) {
+            success: function (img) {
 
-                $('#image_change').attr('src', '/uploads/images/normals/' + msg.url);
-
+                $('#image_change').attr('src', img_puth + img.url);
+                $('#image_input_hidden').val(img.url);
             },
-            complete: function (msg) {
+            complete: function (img) {
 
-                console.log(msg);
-
-                $('#spinner').removeClass('spinner-on');
             }
         });
-
+        $('#spinner').removeClass('spinner-on');
     });
     //event.preventDefault();
 });

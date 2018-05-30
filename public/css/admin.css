@@ -10934,3 +10934,43 @@ footer.sticky-footer {
   padding: .5em 1em;
 }
 
+.spinner {
+  visibility: hidden;
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  right: 35%;
+  bottom: 35%;
+  background: rgba(224, 230, 255, 0.8);
+  width: 30%;
+  height: 30%;
+  border-radius: 0.25rem;
+  -webkit-transition: 1s;
+  transition: 1s;
+  opacity: 0;
+}
+
+.spinner svg {
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+  position: absolute;
+  height: 30px;
+  left: calc(50% - 15px);
+  top: calc(50% - 15px);
+  width: 30px;
+}
+
+.spinner svg circle {
+  fill: transparent;
+  stroke: #007bff;
+  stroke-dasharray: 14;
+  stroke-dashoffset: 15;
+}
+
+.spinner-on {
+  visibility: visible;
+  -webkit-transition: 1s;
+  transition: 1s;
+  opacity: 1;
+}
+

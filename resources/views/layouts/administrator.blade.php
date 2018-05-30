@@ -15,7 +15,7 @@
     <!-- Custom styles for this template-->
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
     @stack('custom-styles')
-    <script src="{{ asset('js/admin/admin.js') }}" defer></script>
+    <script src="{{ asset('js/admin/admin.js') }}"></script>
     @stack('custom-scripts')
 </head>
 

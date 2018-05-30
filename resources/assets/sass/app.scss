@@ -13,7 +13,12 @@ body {
 }
 
 .item-test {
-  min-height: 300px;
+  position: relative;
+  min-height: 265px;
+  overflow: hidden;
+  & .abs-pos {
+    top: 0;
+  }
 }
 .shadow-sm {
   box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;

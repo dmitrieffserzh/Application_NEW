@@ -495,3 +495,49 @@ footer.sticky-footer {
 #mainNav .navbar-collapse .navbar-sidenav > .nav-item > .nav-link {
   padding: .5em 1em;
 }
+
+
+
+
+
+
+
+
+
+// SPINNER
+.spinner {
+  visibility: hidden;
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  right: 35%;
+  bottom: 35%;
+  background: rgba(224, 230, 255, 0.8);
+  width: 30%;
+  height: 30%;
+  border-radius: 0.25rem;
+  transition: 1s;
+  opacity: 0;
+
+  & svg {
+    animation: spin 1s linear infinite;
+    position: absolute;
+    height: 30px;
+    left: calc(50% - 15px);
+    top: calc(50% - 15px);
+    width: 30px;
+  }
+
+  & svg circle {
+    fill: transparent;
+    stroke: #007bff;
+    stroke-dasharray: 14;
+    stroke-dashoffset: 15;
+  }
+}
+
+.spinner-on {
+  visibility: visible;
+  transition: 1s;
+  opacity: 1;
+}
