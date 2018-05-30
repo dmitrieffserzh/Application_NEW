@@ -14759,12 +14759,10 @@ body.fixed-nav {
 #mainNav .navbar-collapse .navbar-sidenav .nav-link-collapse:after {
   float: right;
   content: '\F107';
-  font-family: 'Font Awesome 5 Free';
 }
 
 #mainNav .navbar-collapse .navbar-sidenav .nav-link-collapse.collapsed:after {
   content: '\F105';
-  font-family: 'Font Awesome 5 Free';
 }
 
 #mainNav .navbar-collapse .navbar-sidenav .sidenav-second-level,
@@ -14807,7 +14805,6 @@ body.fixed-nav {
   width: auto;
   content: '\F105';
   border: none;
-  font-family: 'Font Awesome 5 Free';
 }
 
 #mainNav .navbar-collapse .navbar-nav > .nav-item.dropdown > .nav-link .indicator {
@@ -14819,7 +14816,6 @@ body.fixed-nav {
 
 #mainNav .navbar-collapse .navbar-nav > .nav-item.dropdown.show > .nav-link:after {
   content: '\F107';
-  font-family: 'Font Awesome 5 Free';
 }
 
 #mainNav .navbar-collapse .navbar-nav > .nav-item.dropdown .dropdown-menu > .dropdown-item > .dropdown-message {
@@ -15211,13 +15207,14 @@ footer.sticky-footer {
   left: 35%;
   right: 35%;
   bottom: 35%;
-  background: rgba(224, 230, 255, 0.8);
-  width: 30%;
-  height: 30%;
+  background: rgba(255, 255, 255, 1);
+  width: 40px;
+  height: 40px;
   border-radius: 0.25rem;
   -webkit-transition: 1s;
   transition: 1s;
   opacity: 0;
+  z-index: 100;
 }
 
 .spinner svg {

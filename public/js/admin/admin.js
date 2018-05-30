@@ -35848,6 +35848,7 @@ module.exports = __webpack_require__(40);
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+__webpack_require__(1);
 __webpack_require__(41);
 
 (function ($) {

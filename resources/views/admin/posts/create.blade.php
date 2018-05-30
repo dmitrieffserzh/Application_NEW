@@ -73,13 +73,12 @@
                     </label>
                 </div>
 
-                <img src="" id="image_change" width="200px" height="100px">
-
-                <div class="btn-file">
+                <div class="btn-file position-relative">
+                    <img src="" id="image_change" width="200px" height="100px">
                     <input id="image_input" type="file" name="" class="profile-image__form-input">
                     <input id="image_input_hidden" type="hidden" name="image" value="">
 
-                    <span id="spinner" class="spinner">
+                    <span id="spinner" class="spinner shadow">
                         <svg version="1.1" xmlns="http://www.w3.org/svg/2000" viewBox="0 0 30 30" width="30">
                                   <circle cy="15" cx="15" r="14"/>
                         </svg>
@@ -95,8 +94,11 @@
             </form>
         </div>
     </div>
+@endsection
+
+@section('scripts')
     <script>
-        var url      = '{{ route('admin.news.upload') }}';
+        var url = '{{ route('admin.news.upload') }}';
         var img_puth = '/uploads/images/news/';
     </script>
 @endsection
