@@ -4,84 +4,131 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+{{--<meta name="theme-color" content="#111"/>--}}
 
-    <!-- CSRF Token -->
+<!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    @stack('custom-scripts')
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
-
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    @stack('custom-styles')
+@stack('custom-styles')
+
+<!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
+    {{--<script src="{{ asset('js/components/main_menu.js') }}"></script>--}}
+    @stack('custom-scripts')
 </head>
-<body>
-<nav class="navbar navbar-expand-md navbar-light navbar-laravel fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">
-            {{ config('app.name', 'Laravel') }}
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<body class="body">
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Left Side Of Navbar -->
-            <ul class="navbar-nav mr-auto">
-                <li><a class="nav-link" href="{{ route('news.index') }}">News</a></li>
-            </ul>
+<header class="header">
+    <nav class="navbar navbar-expand-md fixed-top navbar-light bg-white shadow">
+        <div class="container">
+            <span class="navbar-brand mb-0 h1"  style="font-weight:900;">LOGO</span>
 
-            <!-- Right Side Of Navbar -->
-            <ul class="navbar-nav ml-auto">
-                <!-- Authentication Links -->
-                @guest
-                    <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
-                    <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
-                @else
-                    <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->nickname }} <span class="caret"></span>
-                        </a>
-
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('admin.dashboard') }}">
-                                Панель управления
-                            </a>
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                               onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                            </a>
-
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
-                        </div>
-                    </li>
-                @endguest
-            </ul>
+            <button type="button" class="main-menu__button">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
         </div>
+    </nav>
+    <div class="container">
+        {{--<div class="logo">LOGO</div>--}}
+        {{--<div id="menu-container" class="menu-container">--}}
+        {{--@if (!Auth::guest())--}}
+        {{--<div class="user-top-widget">--}}
+        {{--<div class="user-top-widget__background" style="--}}
+        {{--background: url('{{ getImage('thumbnail', Auth::user()->profile->avatar ) }}') no-repeat center center;--}}
+        {{--background-size: cover;--}}
+        {{--"></div>--}}
+        {{--<div class="user-top-widget__avatar">--}}
+        {{--<img src="{{ getImage('thumbnail', Auth::user()->profile->avatar ) }}"--}}
+        {{--alt="{{ Auth::user()->nickname }}">--}}
+
+        {{--@if(Auth::user()->isOnline())--}}
+        {{--<span class="status status--online"></span>--}}
+        {{--@else--}}
+        {{--<span class="status status--offline"></span>--}}
+        {{--@endif--}}
+
+        {{--</div>--}}
+        {{--<div class="user-top-widget__name">--}}
+        {{--{{ Auth::user()->nickname }}--}}
+        {{--</div>--}}
+
+        {{--</div>--}}
+        {{--@endif--}}
+        {{--<nav class="main-menu">--}}
+        {{--<ul class="main-menu__list">--}}
+        {{--@if (!Auth::guest())--}}
+        {{--<li class="main-menu__item"><a href="#" class="main-menu__link">Menu item</a></li>--}}
+        {{--<li class="main-menu__item"><a href="#" class="main-menu__link">Menu item</a></li>--}}
+        {{--<li class="main-menu__item"><a href="#" class="main-menu__link">Menu item</a></li>--}}
+        {{--<li class="main-menu__item"><a href="#" class="main-menu__link">Menu item</a></li>--}}
+        {{--<li class="main-menu__item"><a href="#" class="main-menu__link">Menu item</a></li>--}}
+        {{--<li class="main-menu__item"><a href="#" class="main-menu__link">Menu item</a></li>--}}
+        {{--<li class="main-menu__item"><a href="#" class="main-menu__link">Menu item</a></li>--}}
+        {{--<li class="main-menu__item"><a href="{{ route('users.list') }}" class="main-menu__link">Пользователи</a>--}}
+        {{--</li>--}}
+        {{--<li class="main-menu__item"><a href="{{ route('posts.index') }}"--}}
+        {{--class="main-menu__link">Посты</a></li>--}}
+        {{--@endif--}}
+        {{--<!-- Authentication Links -->--}}
+        {{--@if (Auth::guest())--}}
+        {{--<li class="main-menu__item">    <a href="{{ route('login') }}" class="ajax-modal main-menu__link" data-toggle="modal" data-url="{{ route('login') }}" data-name="Войти" data-modal-size="modal-sm">Войти</a>--}}
+        {{--</li>--}}
+        {{--<li class="main-menu__item"><a href="{{ route('register') }}" class="main-menu__link">Регистрация</a>--}}
+        {{--</li>--}}
+        {{--@else--}}
+        {{--<li class="main-menu__item">--}}
+        {{--<a href="{{ route('users.profile', Auth::id()) }}">--}}
+        {{--{{ Auth::user()->nickname }}--}}
+        {{--</a></li>--}}
+
+        {{--<li class="main-menu__item">--}}
+        {{--<a href="{{ route('logout') }}"--}}
+        {{--onclick="event.preventDefault();--}}
+        {{--document.getElementById('logout-form').submit();" class="main-menu__link">--}}
+        {{--Выйти--}}
+        {{--</a>--}}
+
+        {{--<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">--}}
+        {{--{{ csrf_field() }}--}}
+        {{--</form>--}}
+        {{--</li>--}}
+
+        {{--@endif--}}
+        {{--</ul>--}}
+        {{--</nav>--}}
+        {{--</div>--}}
+        {{--<button type="button" class="main-menu__button">--}}
+        {{--<span class="icon-bar"></span>--}}
+        {{--<span class="icon-bar"></span>--}}
+        {{--<span class="icon-bar"></span>--}}
+        {{--</button>--}}
+        {{--<div class="splash"></div>--}}
     </div>
-</nav>
+</header>
 
 <div class="container">
     <div class="row">
-        <main class="main col-md-9">
-            @yield('content')
-        </main>
-        <aside class="aside col-md-3">
-            @yield('sidebar')
-        </aside>
+        @yield('content')
+
+        @yield('aside')
     </div>
 </div>
+
+{{-- footer --}}
+<footer class="footer">
+
+</footer>
+
+{{-- Modal --}}
+<div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document"></div>
+</div>
+
 </body>
 </html>

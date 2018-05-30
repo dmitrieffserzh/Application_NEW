@@ -1,9 +1,13 @@
 {
+    "/js/admin/admin.js": "/js/admin/admin.js",
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/css/admin/admin.css": "/css/admin/admin.css",
     "/css/admin/components/jq_minicolors.css": "/css/admin/components/jq_minicolors.css",
-    "/js/admin/admin.js": "/js/admin/admin.js",
+    "/js/components/modal.js": "/js/components/modal.js",
+    "/js/components/util.js": "/js/components/util.js",
+    "/js/components/rating.js": "/js/components/rating.js",
+    "/js/components/modal-ajax.js": "/js/components/modal-ajax.js",
     "/js/admin/components/jq_minicolors.js": "/js/admin/components/jq_minicolors.js",
     "/js/admin/components/image_uploader.js": "/js/admin/components/image_uploader.js"
 }
