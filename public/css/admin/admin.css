@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);/*!
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,500,600);/*!
  * Bootstrap v4.1.1 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
@@ -14686,6 +14686,7 @@ html {
 
 body {
   overflow-x: hidden;
+  font-family: 'Montserrat' !important;
 }
 
 body.sticky-footer {
@@ -15207,14 +15208,13 @@ footer.sticky-footer {
   left: 35%;
   right: 35%;
   bottom: 35%;
-  background: rgba(255, 255, 255, 1);
-  width: 40px;
-  height: 40px;
+  background: rgba(224, 230, 255, 0.8);
+  width: 30%;
+  height: 30%;
   border-radius: 0.25rem;
   -webkit-transition: 1s;
   transition: 1s;
   opacity: 0;
-  z-index: 100;
 }
 
 .spinner svg {

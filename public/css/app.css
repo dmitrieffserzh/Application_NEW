@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);/*!
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,500,600);/*!
  * Bootstrap v4.1.1 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
@@ -10414,6 +10414,7 @@ a.text-dark:focus {
 body {
   background: #fdfdfd;
   padding-top: 80px;
+  font-family: 'Montserrat' !important;
 }
 
 .item-test {
