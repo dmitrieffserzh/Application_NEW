@@ -18,6 +18,7 @@ class Category extends Migration
 			$table->integer('parent_id')->unsigned()->default(0);
 			$table->string('title');
 			$table->string('slug')->unique();
+			$table->string('color')->default('#007bff');
 			$table->timestamps();
 		});
 	}

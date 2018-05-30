@@ -1,5 +1,12 @@
 @extends('layouts.administrator')
 
+@push('custom-styles')
+    <link href="{{ asset('css/admin/components/jq_minicolors.css') }}" rel="stylesheet">
+@endpush
+@push('custom-scripts')
+    <script src="{{ asset('js/admin/components/jq_minicolors.js') }}"></script>
+@endpush
+
 @section('content')
     <!-- Breadcrumbs-->
     <ol class="breadcrumb">
@@ -54,8 +61,19 @@
                     </select>
                 </div>
 
+                <div class="form-group">
+                    <label for="color">Цвет</label>
+                    <input type="text" name="color" id="color" class="form-control color" value="#007bff">
+                </div>
+
                 <button type="submit" class="btn btn-primary">Добавить категорию</button>
             </form>
         </div>
     </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#color').minicolors();
+        });
+    </script>
 @endsection

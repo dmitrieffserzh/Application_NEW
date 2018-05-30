@@ -1,5 +1,11 @@
 @foreach ($categories as $category)
     <tr>
+        <td class="text-center">
+            <span class="font-weight-bold">{{ $category->id }}</span>
+        </td>
+        <td class="text-center">
+            <span class="badge badge-pill d-inline-block" style="background: {{ $category->color }};width: 20px;height: 20px;vertical-align: middle;"></span>
+        </td>
         <td>
             {!! $delimiter or "" !!}<a href="{{ route('admin.categories.show',$category->id) }}" class="text-dark font-weight-bold">{{$category->title or ""}}</a>
         </td>

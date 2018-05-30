@@ -14,5 +14,7 @@ let mix = require('laravel-mix');
 mix.js('resources/assets/js/app.js', 'public/js')
     .js('resources/assets/js/admin/admin.js', 'public/js/admin')
     .js('resources/assets/js/admin/components/image_uploader.js', 'public/js/admin/components')
+    .js('resources/assets/js/admin/components/jq_minicolors.js', 'public/js/admin/components')
     .sass('resources/assets/sass/app.scss', 'public/css')
-    .sass('resources/assets/sass/admin/admin.scss', 'public/css');
+    .sass('resources/assets/sass/admin/admin.scss', 'public/css/admin')
+    .sass('resources/assets/sass/admin/components/jq_minicolors.scss', 'public/css/admin/components');

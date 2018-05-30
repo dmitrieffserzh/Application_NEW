@@ -10,6 +10,7 @@ class Category extends Model {
 		'parent_id',
 		'title',
 		'slug',
+		'color',
 		'created_at',
 		'updated_at'
 	];

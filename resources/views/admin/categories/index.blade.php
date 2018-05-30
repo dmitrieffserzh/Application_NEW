@@ -25,10 +25,12 @@
         <a class="btn btn-primary" href="{{route('admin.categories.create')}}">Добавить категорию</a>
     </div>
 
-    <table class="table table-hover">
+    <table class="table table-hover table-sm">
         <tr class="bg-light">
-            <th class="text-info">Заголовок</th>
-            <th class="text-info">URL</th>
+            <th class="text-center" style="width: 30px">ID</th>
+            <th class="text-center" style="width: 30px">Цвет</th>
+            <th class="">Заголовок</th>
+            <th class="">URL</th>
             <th></th>
         </tr>
         @include('admin.categories.partials.item', ['categories' => $categories])

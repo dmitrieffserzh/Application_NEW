@@ -16,7 +16,7 @@ class PostsTableSeeder extends Seeder
 		    $x++;
 		    DB::table('posts')->insert( [
 			    'author_id' => 1,
-			    'category_id' => 1,
+			    'category_id' => rand(1,10),
 			    'published' => 1,
 			    'title' => 'Тестовая новость' . $x,
 			    'content' => '<p>'.

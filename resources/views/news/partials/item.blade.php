@@ -11,7 +11,7 @@
                     ">
                 <a href="{{ route('admin.posts.show',$post->id) }}"
                    class="text-dark font-weight-bold">{{$post->title or ""}}</a>
-                <h6 class="d-inline-block small text-light bg-primary p-1"><a
+                <h6 class="d-inline-block small text-light p-1" style="background: {{ $post->category->color }}"><a
                             href="{{ route('news.category', $post->category->slug ) }}"
                             class="text-light p-1">{{ $post->category->title }}</a></h6>
 
