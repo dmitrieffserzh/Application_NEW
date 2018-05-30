@@ -154,13 +154,13 @@
 
 @endsection
 
+
 @section('aside')
     <aside class="col-md-4">
-
-
         <ul>
             <li><a href="{{ route('users.list') }}">Пользователи</a></li>
-            <li><a href="{{ route('stories.index') }}">Посты</a></li>
+            <li><a href="{{ route('news.index') }}">Новости</a></li>
+            <li><a href="{{ route('stories.index') }}">Истории</a></li>
 
             <!-- Authentication Links -->
             @if (Auth::guest())
@@ -188,8 +188,6 @@
 
             @endif
         </ul>
-
-
     </aside>
 @endsection
 {{--<script>--}}
