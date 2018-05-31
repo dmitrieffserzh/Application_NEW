@@ -54,13 +54,19 @@
                             </span>
                         @endif
 
-                        <span class="btn btn-dark btn-sm mt-3">Постов: {{$user->posts($user->id)->count() }}</span>
-                        <span class="btn btn-dark btn-sm mt-3">Подписчики: {{$user->followers($user->id)->count() }}</span>
-                        <span class="btn btn-dark btn-sm mt-3">Подписки: {{$user->followings($user->id)->count() }}</span>
-
-
+                        <div class="btn btn-dark btn-sm mt-3" style="width: 130px;">
+                            <span class="h4">{{$user->posts($user->id)->count() }}</span>
+                            <span class="d-block small text-lowercase">Постов</span>
+                        </div>
+                        <div class="btn btn-dark btn-sm mt-3" style="width: 130px;">
+                            <span class="h4">{{$user->followers($user->id)->count() }}</span>
+                            <span class="d-block small text-lowercase">Подписчиков</span>
+                        </div>
+                        <div class="btn btn-dark btn-sm mt-3" style="width: 130px;">
+                            <span class="h4">{{$user->followings($user->id)->count() }}</span>
+                            <span class="d-block small text-lowercase">Подписки</span>
+                        </div>
                     </div>
-
                 </div>
 
                 {{----}}
