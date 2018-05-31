@@ -54,7 +54,9 @@
                             </span>
                         @endif
 
-                        <span class="btn btn-outline-primary mt-3">{{$user->followers($user->id)->count() }}</span>
+                        <span class="btn btn-dark btn-sm mt-3">Постов: {{$user->posts($user->id)->count() }}</span>
+                        <span class="btn btn-dark btn-sm mt-3">Подписчики: {{$user->followers($user->id)->count() }}</span>
+                        <span class="btn btn-dark btn-sm mt-3">Подписки: {{$user->followings($user->id)->count() }}</span>
 
 
                     </div>

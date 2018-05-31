@@ -39,6 +39,9 @@ class User extends Authenticatable {
     public function profile() {
         return $this->hasOne( Profile::class );
     }
+	public function posts() {
+		return $this->hasMany( Story::class );
+	}
     public function isOnline() {
         return Cache::has( 'user-is-online-' . $this->id );
     }

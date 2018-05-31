@@ -51,7 +51,6 @@
     {{-- TOOLBAR --}}
 
 
-
     <div id="comment-editor" class="comment-form__input"></div>
     <button type="submit" class="comment-form__submit btn btn-primary pull-right">
         Отправить
