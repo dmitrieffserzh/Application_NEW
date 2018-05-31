@@ -23,13 +23,6 @@
                             <img id="image_change" class="rounded" style="width: 150px; height: 150px;"
                                  src="{{ getImage('normal', $user->profile->avatar) }}"
                                  alt="{{ $user->nickname }}">
-                            <span id="spinner" class="profile-image__spinner">
-
-                                <svg version="1.1" xmlns="http://www.w3.org/svg/2000" viewBox="0 0 30 30" width="60">
-                                  <circle cy="15" cx="15" r="14"/>
-                                </svg>
-
-                            </span>
                             @if(Auth::id() == $user->id)
                                 @include('users.partials.image_form')
                             @endif

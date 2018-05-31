@@ -11244,17 +11244,22 @@ $(function () {
 
         modal_window.find(modal_container).append('<div class="modal-content">' + '<div class="modal-header">' + '<h6 class="modal-title">' + data_name + '</h6>' + '<button type="button" class="close" data-dismiss="modal" aria-label="Close">' + '<span aria-hidden="true">&times;</span>' + '</button>' + '</div>' + '<div class="modal-body">' + '</div>' + '</div>');
 
-        $.ajax({
-            url: data_url,
-            headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
-            type: 'POST',
-            success: function success(data) {
-                modal_window.find(modal_content).append(data.html);
-            },
-            complete: function complete() {
-                modal_window.modal('show');
-            }
-        });
+        if (data_url === '#') {
+            modal_window.find(modal_content).append(data_content);
+            modal_window.modal('show');
+        } else {
+            $.ajax({
+                url: data_url,
+                headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+                type: 'POST',
+                success: function success(data) {
+                    modal_window.find(modal_content).append(data.html);
+                },
+                complete: function complete() {
+                    modal_window.modal('show');
+                }
+            });
+        }
 
         if (data_content) {
             modal_window.find(modal_content).append(data_content);

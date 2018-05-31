@@ -7,9 +7,9 @@
     "/js/components/modal.js": "/js/components/modal.js",
     "/js/components/util.js": "/js/components/util.js",
     "/js/components/rating.js": "/js/components/rating.js",
-    "/js/components/profile-image-uploader.js": "/js/components/profile-image-uploader.js",
     "/js/components/modal-ajax.js": "/js/components/modal-ajax.js",
     "/js/components/main_menu.js": "/js/components/main_menu.js",
+    "/js/components/image_uploader.js": "/js/components/image_uploader.js",
     "/js/admin/components/jq_minicolors.js": "/js/admin/components/jq_minicolors.js",
     "/js/admin/components/image_uploader.js": "/js/admin/components/image_uploader.js"
 }

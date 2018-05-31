@@ -29,17 +29,22 @@ $(function () {
              '</div>' +
              '</div>');
 
-        $.ajax({
-            url: data_url,
-            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-            type: 'POST',
-            success: function (data) {
-                modal_window.find(modal_content).append(data.html);
-            },
-            complete: function () {
-                modal_window.modal('show');
-            }
-        });
+        if(data_url === '#') {
+            modal_window.find(modal_content).append(data_content);
+            modal_window.modal('show');
+        } else {
+            $.ajax({
+                url: data_url,
+                headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+                type: 'POST',
+                success: function (data) {
+                    modal_window.find(modal_content).append(data.html);
+                },
+                complete: function () {
+                    modal_window.modal('show');
+                }
+            });
+        }
 
         if(data_content) {
             modal_window.find(modal_content).append(data_content);

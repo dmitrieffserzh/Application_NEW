@@ -15,7 +15,6 @@
     <!-- Custom styles for this template-->
     <link href="{{ asset('css/admin/admin.css') }}" rel="stylesheet">
     @stack('custom-styles')
-
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">

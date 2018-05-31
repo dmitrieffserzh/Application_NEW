@@ -1,12 +1,8 @@
-
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600");
 
-// Variables
-@import "variables";
-
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import 'frontend/bootstrap';
 
 
 body {
@@ -73,7 +69,7 @@ body {
       right: 0;
       bottom: -30px;
       display: inline-block;
-      background: url('icons/upload.svg') no-repeat rgba(0, 0, 0, 0.4) center center;
+      background: url('icons/upload-white.svg') no-repeat rgba(0, 0, 0, 0.4) center center;
       padding: 0;
       margin: 0;
       width: 100%;

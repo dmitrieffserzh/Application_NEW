@@ -1,33 +1,54 @@
 // IMAGE UPLOADER
-$(document).ready(function () {
-    $('#image_input').on('change', function () {
+$(function () {
 
-        $('#spinner').addClass('spinner-on');
+    uplodImage = function (e) {
 
-        var form = new FormData();
-        var image = $(this)[0].files[0];
+        var settings = new settingsUploads();
+        var prop     = settings.getUrl($(e).data('upload-type'));
+
+        var form     = new FormData();
+        var image    = $(e)[0].files[0];
         form.append('image', image);
 
         $.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-            url: url,
+            url: prop.url,
             data: form,
             cache: false,
             contentType: false,
             processData: false,
             type: 'POST',
+            beforeSend: function () {
+                $('#spinner').addClass('spinner-on');
+            },
             error: function (error) {
             },
             success: function (img) {
 
-                $('#image_change').attr('src', img_puth + img.url);
+                $('#image_change').attr('src', prop.path + img.url);
                 $('#image_input_hidden').val(img.url);
             },
-            complete: function (img) {
-
+            complete: function () {
+                $('#spinner').removeClass('spinner-on');
             }
         });
-        $('#spinner').removeClass('spinner-on');
-    });
-    //event.preventDefault();
+    };
 });
+
+var settingsUploads = function () {
+
+    this.getConfig = function () {
+        return {
+            'create_news': {
+                url:  '/admin/upload',
+                path: '/uploads/images/news/'
+            }
+        }
+    };
+
+    this.getUrl = function (id) {
+        return this.dict[id];
+    };
+
+    this.dict = this.getConfig();
+};
