@@ -13,12 +13,13 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-@stack('custom-styles')
+    @stack('custom-styles')
 
 <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/components/main_menu.js') }}"></script>
     @stack('custom-scripts')
+    @yield('scripts')
 </head>
 <body class="body">
 

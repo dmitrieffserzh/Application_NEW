@@ -6,19 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 {{--<meta name="theme-color" content="#111"/>--}}
 
-<!-- CSRF Token -->
+    <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-@stack('custom-styles')
+    @stack('custom-styles')
 
-<!-- Scripts -->
+    <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     {{--<script src="{{ asset('js/components/main_menu.js') }}"></script>--}}
     @stack('custom-scripts')
+    @yield('scripts')
 </head>
 <body class="body">
 

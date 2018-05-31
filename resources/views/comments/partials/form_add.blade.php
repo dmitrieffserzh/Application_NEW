@@ -1,6 +1,7 @@
 @push('custom-scripts')
+    <script src="{{ asset('js/components/comments.js') }}"></script>
     <script src="{{ asset('js/components/jq_hotkeys.js') }}"></script>
-    <script src="{{ asset('js/components/bootstrap-wysiwyg.js') }}"></script>
+    <script src="{{ asset('js/components/wysiwyg.js') }}"></script>
 @endpush
 
 
@@ -102,8 +103,10 @@
 {{--</div>--}}
 
 
-<script>
-    $(function () {
-        $('#comment-editor').wysiwyg();
-    });
-</script>
+@section('scripts')
+    <script>
+        $(function () {
+            $('#comment-editor').wysiwyg();
+        });
+    </script>
+@endsection

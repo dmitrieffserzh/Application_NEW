@@ -6,10 +6,15 @@
     "/css/admin/components/jq_minicolors.css": "/css/admin/components/jq_minicolors.css",
     "/js/components/modal.js": "/js/components/modal.js",
     "/js/components/util.js": "/js/components/util.js",
+    "/js/components/wysiwyg.js": "/js/components/wysiwyg.js",
     "/js/components/rating.js": "/js/components/rating.js",
     "/js/components/modal-ajax.js": "/js/components/modal-ajax.js",
     "/js/components/main_menu.js": "/js/components/main_menu.js",
+    "/js/components/jq_hotkeys.js": "/js/components/jq_hotkeys.js",
     "/js/components/image_uploader.js": "/js/components/image_uploader.js",
+    "/js/components/comments.js": "/js/components/comments.js",
+    "/js/admin/components/wysiwyg.js": "/js/admin/components/wysiwyg.js",
     "/js/admin/components/jq_minicolors.js": "/js/admin/components/jq_minicolors.js",
+    "/js/admin/components/jq_hotkeys.js": "/js/admin/components/jq_hotkeys.js",
     "/js/admin/components/image_uploader.js": "/js/admin/components/image_uploader.js"
 }

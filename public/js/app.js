@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 13);
+/******/ 	return __webpack_require__(__webpack_require__.s = 14);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -11274,79 +11274,7 @@ $(function () {
 });
 
 /***/ }),
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(14);
-__webpack_require__(17);
-__webpack_require__(18);
-module.exports = __webpack_require__(19);
-
-
-/***/ }),
-/* 14 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
-
-window.$ = window.jQuery = __webpack_require__(0);
-//window.Laravel = { csrfToken: $('meta[name=csrf-token]').attr("content") };
-//require('./bootstrap');
-//require('./jq_swipe-detect');
-__webpack_require__(2);
-__webpack_require__(3);
-__webpack_require__(4);
-__webpack_require__(15);
-__webpack_require__(16);
-
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
-/***/ }),
-/* 15 */
-/***/ (function(module, exports) {
-
-// FOLLOW SYSTEM
-$(document).on('click', '.follow', function () {
-    var elem = $(this).parent();
-    var data = $(this).data();
-    $.ajax({
-        headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
-        data: data,
-        type: 'POST',
-        url: '/follow_handler',
-        success: function success(data) {
-            if (data.success === true) {
-                elem.find('.follow').text('Отписаться');
-                console.log(data);
-            } else {
-                elem.find('.follow').text('Подписаться');
-                console.log(data);
-            }
-        }
-    });
-
-    event.preventDefault();
-});
-
-/***/ }),
-/* 16 */
+/* 5 */
 /***/ (function(module, exports) {
 
 // COMMENT FORM
@@ -11486,6 +11414,78 @@ $(function () {
 //     $(this).find(modal_container).children().remove();
 //     if(modal_size) modal_window.find(modal_container).removeClass(modal_size);
 // });
+
+/***/ }),
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */,
+/* 13 */,
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(15);
+__webpack_require__(17);
+__webpack_require__(18);
+module.exports = __webpack_require__(19);
+
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/**
+ * First we will load all of this project's JavaScript dependencies which
+ * includes Vue and other libraries. It is a great starting point when
+ * building robust, powerful web applications using Vue and Laravel.
+ */
+
+window.$ = window.jQuery = __webpack_require__(0);
+//window.Laravel = { csrfToken: $('meta[name=csrf-token]').attr("content") };
+//require('./bootstrap');
+//require('./jq_swipe-detect');
+__webpack_require__(2);
+__webpack_require__(3);
+__webpack_require__(4);
+__webpack_require__(16);
+__webpack_require__(5);
+
+/**
+ * Next, we will create a fresh Vue application instance and attach it to
+ * the page. Then, you may begin adding components to this application
+ * or customize the JavaScript scaffolding to fit your unique needs.
+ */
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports) {
+
+// FOLLOW SYSTEM
+$(document).on('click', '.follow', function () {
+    var elem = $(this).parent();
+    var data = $(this).data();
+    $.ajax({
+        headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+        data: data,
+        type: 'POST',
+        url: '/follow_handler',
+        success: function success(data) {
+            if (data.success === true) {
+                elem.find('.follow').text('Отписаться');
+                console.log(data);
+            } else {
+                elem.find('.follow').text('Подписаться');
+                console.log(data);
+            }
+        }
+    });
+
+    event.preventDefault();
+});
 
 /***/ }),
 /* 17 */

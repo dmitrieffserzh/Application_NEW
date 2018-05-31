@@ -38,65 +38,67 @@
     </button>
 </form>
 
-<script>
-    $(document).ready(function () {
-        // OPEN FORM
-        $('.form_list__title').click(function () {
-            $('.editor_box').addClass('editor_box--open');
-        });
-
-        // EDITOR
-        $('#editor').wysiwyg({
-            hotKeys: {
-                'ctrl+b meta+b': 'bold',
-                'ctrl+i meta+i': 'italic',
-                'ctrl+u meta+u': 'underline',
-            }
-        });
-
-        // FORM
-        $('#new_post').submit(function (event) {
-
-            var alert = $('#form-messages');
-            var data_array = $(this).serializeArray();
-            var data = {};
-
-            data_array.forEach(function (item) {
-                data[item.name] = item.value;
+@section('scripts')
+    <script>
+        $(document).ready(function () {
+            // OPEN FORM
+            $('.form_list__title').click(function () {
+                $('.editor_box').addClass('editor_box--open');
             });
 
-            data["content"] = $('#editor').cleanHtml();
-
-            //SEND FORM
-            $.ajax({
-                data: data,
-                type: 'POST',
-                url: '/posts/create_in_list',
-                DataType: 'text',
-                success: function (result) {
-                    alert.removeClass('alert-danger');
-                    alert.addClass('alert-success');
-                    alert.text(
-                        result.error.customMessages.title.required,
-                        result.error.customMessages.title.min
-                    );
-                    alert.show();
-                     setTimeout(function () {
-                         alert.hide();
-                         //location.reload();
-                     }, 5000)
-                },
-                error: function (result) {
-                    alert.removeClass('alert-success');
-                    alert.addClass('alert-danger');
-                    alert.text(result);
-                    alert.show();
-                     setTimeout(function () {
-                         alert.hide();
-                     }, 5000)
+            // EDITOR
+            $('#editor').wysiwyg({
+                hotKeys: {
+                    'ctrl+b meta+b': 'bold',
+                    'ctrl+i meta+i': 'italic',
+                    'ctrl+u meta+u': 'underline',
                 }
             });
-            event.preventDefault();
+
+            // FORM
+            $('#new_post').submit(function (event) {
+
+                var alert = $('#form-messages');
+                var data_array = $(this).serializeArray();
+                var data = {};
+
+                data_array.forEach(function (item) {
+                    data[item.name] = item.value;
+                });
+
+                data["content"] = $('#editor').cleanHtml();
+
+                //SEND FORM
+                $.ajax({
+                    data: data,
+                    type: 'POST',
+                    url: '/posts/create_in_list',
+                    DataType: 'text',
+                    success: function (result) {
+                        alert.removeClass('alert-danger');
+                        alert.addClass('alert-success');
+                        alert.text(
+                            result.error.customMessages.title.required,
+                            result.error.customMessages.title.min
+                        );
+                        alert.show();
+                         setTimeout(function () {
+                             alert.hide();
+                             //location.reload();
+                         }, 5000)
+                    },
+                    error: function (result) {
+                        alert.removeClass('alert-success');
+                        alert.addClass('alert-danger');
+                        alert.text(result);
+                        alert.show();
+                         setTimeout(function () {
+                             alert.hide();
+                         }, 5000)
+                    }
+                });
+                event.preventDefault();
+            });
         });
-    });
-</script>
+    </script>
+@endsection

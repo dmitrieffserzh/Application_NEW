@@ -2,12 +2,13 @@
 
 namespace App\Models;
 
+use App\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Relations\Relation;
 
 Relation::morphMap([
-	'post' => 'App\Post'
+	'story' => 'App\Models\Story'
 ]);
 
 class Comment extends Model {
