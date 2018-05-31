@@ -27,6 +27,18 @@
         <div class="container">
             <span class="navbar-brand mb-0 h1"  style="font-weight:900;">LOGO</span>
 
+            <ul class="main-menu">
+                <li class="main-menu__item{{ is_active('news.*') }}">
+                    <a href="{{ route('news.index') }}" class="main-menu__link">Новости</a>
+                </li>
+                <li class="main-menu__item{{ is_active('stories.*') }}">
+                    <a href="{{ route('stories.index') }}" class="main-menu__link">Истории</a>
+                </li>
+                <li class="main-menu__item{{ is_active('users.*') }}">
+                    <a href="{{ route('users.list') }}" class="main-menu__link">Пользователи</a>
+                </li>
+            </ul>
+
             <button type="button" class="main-menu__button">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>

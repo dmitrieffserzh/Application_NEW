@@ -21,6 +21,66 @@ body {
   overflow: hidden;
 }
 
+// MAIN MENU
+.main-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  &__item {
+    display: inline-block;
+    position: relative;
+    &:hover .main-menu__link {
+      color: #00c2ff;
+      text-decoration: none;
+      transition: .3s;
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background: #00c2ff;
+        transition: .3s;
+      }
+    }
+    &.active .main-menu__link {
+      color: #00c2ff;
+      text-decoration: none;
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background: #00c2ff;
+      }
+    }
+  }
+  &__link {
+    display: block;
+    padding: 7px 10px;
+    color: #000;
+    //font-weight: bold;
+    text-decoration: none;
+    transition: .3s;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background: #00c2ff;
+      transition: .3s;
+    }
+  }
+}
+
+
+
+
 .main-menu__button {
   //display: none;
   float: right;

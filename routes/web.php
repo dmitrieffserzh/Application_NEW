@@ -43,9 +43,9 @@ Route::get('news/{any?}', 'PostController@index')->where('any','.*')->name('news
 
 // USERS
 Route::get('users', 'ProfileController@index')->name('users.list');
-Route::get('user/id{id}', 'ProfileController@profile')->name('users.profile');
-Route::get('user/id{id}/edit', 'ProfileController@edit')->name('users.profile.edit');
-Route::post('user/id{id}/update', 'ProfileController@update')->name('users.profile.update');
+Route::get('users/user_id{id}', 'ProfileController@profile')->name('users.profile');
+Route::get('users/user_id{id}/edit', 'ProfileController@edit')->name('users.profile.edit');
+Route::post('users/user_id{id}/update', 'ProfileController@update')->name('users.profile.update');
 // POSTS
 
 //Route::resource('posts','PostController');

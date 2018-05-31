@@ -5,14 +5,13 @@
 @extends('layouts.aside-left')
 <style>
     .bg-profile {
-        position: relative;
-        background: -moz-linear-gradient(45deg, rgba(0, 233, 255, 0.7) 0%, rgba(0, 143, 212, 0.77) 100%), url("{{ getImage('cover', $user->profile->avatar) }}") no-repeat center center;
-        background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(0, 143, 212, 0.77)), color-stop(100%, rgba(7, 33, 78, 0.96))), url("{{ getImage('cover', $user->profile->avatar) }}") no-repeat center center;
-        background: -webkit-linear-gradient(45deg, rgba(0, 233, 255, 0.7) 0%, rgba(0, 143, 212, 0.77) 100%), url("{{ getImage('cover', $user->profile->avatar) }}") no-repeat center center;
-        background: -o-linear-gradient(45deg, rgba(0, 233, 255, 0.7) 0%, rgba(0, 143, 212, 0.77) 100%), url("{{ getImage('cover', $user->profile->avatar) }}") no-repeat center center;
-        background: -ms-linear-gradient(45deg, rgba(0, 233, 255, 0.7) 0%, rgba(0, 143, 212, 0.77) 100%), url("{{ getImage('cover', $user->profile->avatar) }}") no-repeat center center;
-        background: linear-gradient(45deg, rgba(0, 233, 255, 0.7) 0%, rgba(0, 143, 212, 0.77) 100%), url("{{ getImage('cover', $user->profile->avatar) }}") no-repeat center center;
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=rgba(0, 233, 255, 0.7), endColorstr=rgba(0, 143, 212, 0.77), GradientType=1);
+        background: -moz-linear-gradient(45deg, rgba(0, 233, 255, 0.7) 0%, rgba(209, 0, 212, 0.85) 100%), url("{{ getImage('cover', $user->profile->avatar) }}") no-repeat center center;
+        background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(0, 143, 212, 0.77)), color-stop(100%, rgba(209, 0, 212, 0.85))), url("{{ getImage('cover', $user->profile->avatar) }}") no-repeat center center;
+        background: -webkit-linear-gradient(45deg, rgba(0, 233, 255, 0.7) 0%, rgba(209, 0, 212, 0.85) 100%), url("{{ getImage('cover', $user->profile->avatar) }}") no-repeat center center;
+        background: -o-linear-gradient(45deg, rgba(0, 233, 255, 0.7) 0%, rgba(209, 0, 212, 0.85) 100%), url("{{ getImage('cover', $user->profile->avatar) }}") no-repeat center center;
+        background: -ms-linear-gradient(45deg, rgba(0, 233, 255, 0.7) 0%, rgba(209, 0, 212, 0.85) 100%), url("{{ getImage('cover', $user->profile->avatar) }}") no-repeat center center;
+        background: linear-gradient(45deg, rgba(0, 233, 255, 0.7) 0%, rgba(209, 0, 212, 0.85) 100%), url("{{ getImage('cover', $user->profile->avatar) }}") no-repeat center center;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=rgba(0, 233, 255, 0.7), endColorstr=rgba(209, 0, 212, 0.85), GradientType=1);
         width: 100%;
         height: auto;
         background-size: cover;
