@@ -101,9 +101,10 @@ $(function () {
             },
             error: function error(_error) {},
             success: function success(img) {
-
-                $('#image_change').attr('src', prop.path + img.url);
-                $('#image_input_hidden').val(img.url);
+                if (img.url) {
+                    $('#image_change').attr('src', prop.path + img.url);
+                    $('#image_input_hidden').val(img.url);
+                }
             },
             complete: function complete() {
                 $('#spinner').removeClass('spinner-on');

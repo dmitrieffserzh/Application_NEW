@@ -26,12 +26,13 @@ $(function () {
                 //$('.modal').modal('show');
             },
             success: function (img) {
-
-                $('#image_change').attr('src', prop.path_avatar + img.url);
-                $('.bg-profile').css({
-                    'background-image':'url('+ prop.path_cover + img.url +')',
-                    'background-position': 'center center'
-                });
+                if (img.url) {
+                    $('#image_change').attr('src', prop.path_avatar + img.url);
+                    $('.bg-profile').css({
+                        'background-image': 'url(' + prop.path_cover + img.url + ')',
+                        'background-position': 'center center'
+                    });
+                }
             },
             complete: function () {
                 $('#spinner').removeClass('spinner-on');

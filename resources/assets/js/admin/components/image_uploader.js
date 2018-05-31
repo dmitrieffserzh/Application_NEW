@@ -24,9 +24,10 @@ $(function () {
             error: function (error) {
             },
             success: function (img) {
-
-                $('#image_change').attr('src', prop.path + img.url);
-                $('#image_input_hidden').val(img.url);
+                if (img.url) {
+                    $('#image_change').attr('src', prop.path + img.url);
+                    $('#image_input_hidden').val(img.url);
+                }
             },
             complete: function () {
                 $('#spinner').removeClass('spinner-on');
