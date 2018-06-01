@@ -1,7 +1,7 @@
 @foreach($items as $item)
     <div id="comment-{{$item->id}}" class="comment media lh-100">
         <span class="d-inline-block position-relative mr-2">
-            <img class="rounded-circle" style="width: 30px; height: 30px;"
+            <img class="rounded-circle" style="width: 40px; height: 40px;"
                  src="{{ getImage('thumbnail', $item->author->profile->avatar) }}" alt="{{ $item->author->nickname }}">
             @if($item->author->isOnline())
                 <span class="component-status component-status--online"></span>
@@ -43,10 +43,10 @@
                 @include('components.likes.like', ['content'=>$item])
 
             @endif
-
+        </div>
+    </div>
             @if(isset($comments_list[$item->id]))
                 @include('comments.partials.item',['items'=>$comments_list[$item->id]])
             @endif
-        </div>
-    </div>
+
 @endforeach
