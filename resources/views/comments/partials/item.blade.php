@@ -39,6 +39,9 @@
                     </div>
 
                 </div>
+
+                @include('components.likes.like', ['content'=>$item])
+
             @endif
 
             @if(isset($comments_list[$item->id]))

@@ -17,7 +17,7 @@ class Post extends Migration
 		    $table->increments('id');
 		    $table->string('title');
 		    $table->longText('content');
-		    $table->integer('author_id')->unsigned();
+		    $table->integer('user_id')->unsigned();
 		    $table->integer('category_id')->unsigned();
 		    $table->integer('published')->default(1);
 		    $table->string('image');

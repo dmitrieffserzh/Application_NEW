@@ -31,12 +31,12 @@
                     </div>
                 </div>
                 <div class="col">
-                <div class="float-right">
-                    <a class="btn btn-primary btn-sm" href="{{ route('stories.index') }}"> Назад</a>
-                </div>
-                <h1 class="h5 mt-4 mb-3">{{ $post->title}}</h1>
+                    <div class="float-right">
+                        <a class="btn btn-primary btn-sm" href="{{ route('stories.index') }}"> Назад</a>
+                    </div>
+                    <h1 class="h5 mt-4 mb-3">{{ $post->title}}</h1>
 
-                {!! $post->content !!}
+                    {!! $post->content !!}
 
                     @include('components.comments.comments_count', ['content'=>$post])
                     @include('components.views.view_count', ['content'=>$post])

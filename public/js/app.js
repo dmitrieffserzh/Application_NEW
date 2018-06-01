@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 14);
+/******/ 	return __webpack_require__(__webpack_require__.s = 13);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -11282,18 +11282,20 @@ $(function () {
 /* 10 */,
 /* 11 */,
 /* 12 */,
-/* 13 */,
-/* 14 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(15);
+__webpack_require__(14);
+__webpack_require__(16);
 __webpack_require__(17);
 __webpack_require__(18);
-module.exports = __webpack_require__(19);
+__webpack_require__(19);
+__webpack_require__(20);
+module.exports = __webpack_require__(21);
 
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -11310,7 +11312,7 @@ window.$ = window.jQuery = __webpack_require__(0);
 __webpack_require__(2);
 __webpack_require__(3);
 __webpack_require__(4);
-__webpack_require__(16);
+__webpack_require__(15);
 //require('./components/comments.js');
 
 
@@ -11321,7 +11323,7 @@ __webpack_require__(16);
  */
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ (function(module, exports) {
 
 // FOLLOW SYSTEM
@@ -11348,6 +11350,12 @@ $(document).on('click', '.follow', function () {
 });
 
 /***/ }),
+/* 16 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
 /* 17 */
 /***/ (function(module, exports) {
 
@@ -11361,6 +11369,18 @@ $(document).on('click', '.follow', function () {
 
 /***/ }),
 /* 19 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 21 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

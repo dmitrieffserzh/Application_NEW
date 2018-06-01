@@ -1,3 +1,7 @@
+@push('custom-scripts')
+
+@endpush
+
 @extends('layouts.app')
 
 @section('content')

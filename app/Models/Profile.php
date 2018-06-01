@@ -11,8 +11,8 @@ class Profile extends Model {
 
 	protected $dates =['offline_at'];
 
+	// RELATIONS
     public function user() {
         return $this->belongsTo(User::class);
     }
-
 }

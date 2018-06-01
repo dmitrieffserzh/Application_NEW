@@ -12,18 +12,18 @@ class PostController extends Controller {
 
 	public function index() {
 
-		return view('news.index', [
-			'posts' => Post::paginate(15)
-		]);
+		return view( 'news.index', [
+			'posts' => Post::paginate( 15 )
+		] );
 	}
 
-	public function show($id) {
+	public function show( $id ) {
 
-		$post = Post::find($id);
-		Event::fire('story.view', $post);
+		$post = Post::find( $id );
+		Event::fire( 'news.view', $post );
 
-		return view('news.show', [
+		return view( 'news.view', [
 			'post' => $post
-		]);
+		] );
 	}
 }

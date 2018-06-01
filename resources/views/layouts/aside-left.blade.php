@@ -13,11 +13,14 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/components/likes.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/components/views.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/components/comments.css') }}" rel="stylesheet">
     @stack('custom-styles')
 
-<!-- Scripts -->
+    <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/components/main_menu.js') }}"></script>
+    <script src="{{ asset('js/components/likes.js') }}"></script>
     @stack('custom-scripts')
     @yield('scripts')
 </head>

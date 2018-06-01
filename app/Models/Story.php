@@ -8,12 +8,14 @@ use Illuminate\Support\Facades\Auth;
 
 class Story extends Model {
 
-	public $type = 'post';
+	public $type = 'story';
 
 	protected $appends = ['liked'];
 
 	protected $fillable = ['user_id', 'title', 'content'];
 
+
+	// RELATIONS
 	public function like() {
 		return $this->morphMany(Like::class, 'content');
 	}
@@ -26,7 +28,6 @@ class Story extends Model {
     public function owner() {
         return $this->belongsTo(User::class, 'user_id');
     }
-
 
 	public function comments() {
 		return $this->morphMany(Comment::class, 'content')->withTrashed();

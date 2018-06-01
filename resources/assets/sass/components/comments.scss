@@ -1,0 +1,25 @@
+// COUNT COMMENT SYSTEM
+.component {
+  &-comments-count {
+    display: inline-block;
+    line-height: 0;
+    &__count {
+      display: inline-block;
+      float: right;
+      padding: 0 .3rem;
+      min-width: 40px;
+      font-family: Arial, monospace;
+      font-size: 14px;
+      color: #b6bcc7;
+      text-align: left;
+      vertical-align: middle;
+      line-height: 1.4rem;
+    }
+    &__icon {
+      display: inline-block;
+      fill: #fff !important;
+      stroke: #cad0dc !important;
+      overflow: hidden;
+    }
+  }
+}

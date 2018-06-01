@@ -2,7 +2,6 @@
 
 namespace App\Events;
 
-use App\Models\Story;
 use Illuminate\Session\Store;
 
 class ViewPostHandler {
@@ -12,7 +11,7 @@ class ViewPostHandler {
         $this->session = $session;
     }
 
-    public function handle(Story $post) {
+    public function handle($post) {
         if (!$this->isPostViewed($post)) {
             $post->increment('count_view');
             $this->storePost($post);

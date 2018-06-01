@@ -7,7 +7,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Relations\Relation;
 
 Relation::morphMap([
-	'post' => 'App\Post'
+	'story'     => Story::class,
+	'news'      => Post::class,
+	'comment'   => Comment::class
 ]);
 
 class Like extends Model {
@@ -21,6 +23,7 @@ class Like extends Model {
 	];
 	protected $dates = ['deleted_at'];
 
+	// RELATIONS
 	public function contentTypes() {
 		return $this->morphedTo();
 	}

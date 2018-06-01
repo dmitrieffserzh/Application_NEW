@@ -9,7 +9,7 @@
                     position-absolute abs-pos
                     @endif
                     ">
-                <a href="{{ route('admin.posts.show',$post->id) }}"
+                <a href="{{ route('news.view',$post->id) }}"
                    class="text-dark font-weight-bold">{{$post->title or ""}}</a>
                 <h6 class="d-inline-block small text-light p-1" style="background: {{ $post->category->color }}"><a
                             href="{{ route('news.category', $post->category->slug ) }}"
@@ -22,6 +22,11 @@
                     <a href="{{route( 'admin.posts.destroy', $post->id)}}" data-method="delete"
                        data-token="{{csrf_token()}}" data-confirm="Вы уверены?" class="btn btn-light btn-sm">Удал</a>
                 </div>
+
+                @include('components.comments.comments_count', ['content'=>$post])
+                @include('components.views.view_count', ['content'=>$post])
+                @include('components.likes.like', ['content'=>$post])
+
             </div>
         </div>
     </div>

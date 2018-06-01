@@ -35,11 +35,14 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'name' => 'admin'], f
 
 
 // FRONT
+// AJAX
 Route::post('/login', 'Auth\LoginController@ajax_auth');
 
-Route::get('news', 'PostController@index')->name('news.index');
-Route::get('news/{any?}', 'PostController@index')->where('any','.*')->name('news.category');
-
+Route::group(['middleware' => 'filter.view.counts'], function() {
+	Route::get('news', 'PostController@index')->name('news.index');
+	Route::get('news/news_id{id}', 'PostController@show')->name('news.view');
+	Route::get('news/{any?}', 'PostController@index')->where('any','.*')->name('news.category');
+});
 
 // USERS
 Route::get('users', 'ProfileController@index')->name('users.list');
