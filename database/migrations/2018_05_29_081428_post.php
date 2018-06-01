@@ -21,6 +21,7 @@ class Post extends Migration
 		    $table->integer('category_id')->unsigned();
 		    $table->integer('published')->default(1);
 		    $table->string('image');
+		    $table->integer('count_view')->unsigned()->default(0);
 		    $table->timestamps();
 	    });
     }

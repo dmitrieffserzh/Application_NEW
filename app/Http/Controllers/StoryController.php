@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Story;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Event;
-
 use Illuminate\Http\Request;
 
 class StoryController extends Controller {

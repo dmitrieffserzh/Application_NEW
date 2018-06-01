@@ -18,7 +18,7 @@ class CreateStoriesTable extends Migration
             $table->integer('user_id');
             $table->string('title', 255);
             $table->text('content');
-            $table->integer('count_view')->default(0);
+            $table->integer('count_view')->unsigned()->default(0);
             $table->timestamps();
         });
     }
