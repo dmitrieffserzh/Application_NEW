@@ -29,12 +29,9 @@
 <header class="header fixed-top">
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow">
         <div class="container">
+            <a href="{{ route('home') }}" class="navbar-brand mb-0 h1 d-inline-block" style="font-weight:900;">LOGO</a>
 
-        <!--
             <ul class="main-menu d-block">
-                <li class="main-menu__item{{ is_active('home') }}">
-                    <a href="{{ route('home') }}" class="main-menu__link">Главная</a>
-                </li>
                 <li class="main-menu__item{{ is_active('news.*') }}">
                     <a href="{{ route('news.index') }}" class="main-menu__link">Новости</a>
                 </li>
@@ -46,9 +43,22 @@
                 </li>
             </ul>
 
--->
-            <span class="navbar-brand mb-0 h1"  style="font-weight:900;">LOGO</span>
-            <button type="button" class="main-menu__button">
+            <span class="d-inline-block position-relative">
+                @if(Auth::guest())
+                    <a href="{{ route('login') }}" class="ajax-modal main-menu__link" data-toggle="modal" data-url="{{ route('login') }}" data-name="Войти" data-modal-size="modal-sm">Войти</a>
+                @else
+
+                    <a class="text-white" href="{{ route('users.profile', Auth::user()->id) }}"
+                       title="{{ Auth::user()->nickname }}">{{ Auth::user()->nickname }}</a>
+                    <img class="rounded-circle"
+                         style="width: 40px; height: 40px; border: 2px Solid rgba(255, 255, 255, 0.1);"
+                         src="{{ getImage('thumbnail', Auth::user()->profile->avatar) }}"
+                         alt="{{ Auth::user()->profile->nickname }}">
+
+                @endif
+            </span>
+
+            <button type="button" class="main-menu__button d-md-none">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -60,7 +70,7 @@
         <div class="container">
             <div class="row">
                 <nav class="nav nav-underline">
-                    <a class="nav-link active" href="#">#общество</a>
+                    <a class="nav-link" href="#">#общество</a>
                     <a class="nav-link" href="#">#дети
                         <span class="badge badge-pill bg-light align-text-bottom">346</span>
                     </a>

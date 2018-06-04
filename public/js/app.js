@@ -63,8 +63,9 @@
 /******/ 	return __webpack_require__(__webpack_require__.s = 13);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10435,8 +10436,106 @@ return jQuery;
 
 
 /***/ }),
-/* 1 */,
-/* 2 */
+
+/***/ 13:
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(14);
+__webpack_require__(16);
+__webpack_require__(17);
+__webpack_require__(18);
+__webpack_require__(19);
+__webpack_require__(20);
+module.exports = __webpack_require__(21);
+
+
+/***/ }),
+
+/***/ 14:
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/**
+ * First we will load all of this project's JavaScript dependencies which
+ * includes Vue and other libraries. It is a great starting point when
+ * building robust, powerful web applications using Vue and Laravel.
+ */
+
+window.$ = window.jQuery = __webpack_require__(0);
+//window.Laravel = { csrfToken: $('meta[name=csrf-token]').attr("content") };
+//require('./bootstrap');
+//require('./jq_swipe-detect');
+__webpack_require__(2);
+__webpack_require__(3);
+__webpack_require__(4);
+__webpack_require__(15);
+__webpack_require__(98);
+
+/**
+ * Next, we will create a fresh Vue application instance and attach it to
+ * the page. Then, you may begin adding components to this application
+ * or customize the JavaScript scaffolding to fit your unique needs.
+ */
+
+/***/ }),
+
+/***/ 15:
+/***/ (function(module, exports) {
+
+// FOLLOW SYSTEM
+$(document).on('click', '.follow', function () {
+    var elem = $(this).parent();
+    var data = $(this).data();
+    $.ajax({
+        headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
+        data: data,
+        type: 'POST',
+        url: '/follow_handler',
+        success: function success(data) {
+            if (data.success === true) {
+                elem.find('.follow').text('Отписаться');
+                console.log(data);
+            } else {
+                elem.find('.follow').text('Подписаться');
+                console.log(data);
+            }
+        }
+    });
+
+    event.preventDefault();
+});
+
+/***/ }),
+
+/***/ 16:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 17:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 18:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 19:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 2:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10591,7 +10690,22 @@ var Util = function ($) {
 /* harmony default export */ __webpack_exports__["default"] = (Util);
 
 /***/ }),
-/* 3 */
+
+/***/ 20:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 21:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 3:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11220,7 +11334,8 @@ var Modal = function ($) {
 /* harmony default export */ __webpack_exports__["default"] = (Modal);
 
 /***/ }),
-/* 4 */
+
+/***/ 4:
 /***/ (function(module, exports) {
 
 // MODAL WINDOW
@@ -11274,116 +11389,555 @@ $(function () {
 });
 
 /***/ }),
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */
-/***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(14);
-__webpack_require__(16);
-__webpack_require__(17);
-__webpack_require__(18);
-__webpack_require__(19);
-__webpack_require__(20);
-module.exports = __webpack_require__(21);
+/***/ 98:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util__ = __webpack_require__(2);
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 
-/***/ }),
-/* 14 */
-/***/ (function(module, exports, __webpack_require__) {
 
 
 /**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
+ * --------------------------------------------------------------------------
+ * Bootstrap (v4.1.1): carousel.js
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * --------------------------------------------------------------------------
  */
 
-window.$ = window.jQuery = __webpack_require__(0);
-//window.Laravel = { csrfToken: $('meta[name=csrf-token]').attr("content") };
-//require('./bootstrap');
-//require('./jq_swipe-detect');
-__webpack_require__(2);
-__webpack_require__(3);
-__webpack_require__(4);
-__webpack_require__(15);
-//require('./components/comments.js');
+var Carousel = function ($) {
+  /**
+   * ------------------------------------------------------------------------
+   * Constants
+   * ------------------------------------------------------------------------
+   */
+
+  var NAME = 'carousel';
+  var VERSION = '4.1.1';
+  var DATA_KEY = 'bs.carousel';
+  var EVENT_KEY = '.' + DATA_KEY;
+  var DATA_API_KEY = '.data-api';
+  var JQUERY_NO_CONFLICT = $.fn[NAME];
+  var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
+  var ARROW_RIGHT_KEYCODE = 39; // KeyboardEvent.which value for right arrow key
+  var TOUCHEVENT_COMPAT_WAIT = 500; // Time for mouse compat events to fire after touch
+
+  var Default = {
+    interval: 5000,
+    keyboard: true,
+    slide: false,
+    pause: 'hover',
+    wrap: true
+  };
+
+  var DefaultType = {
+    interval: '(number|boolean)',
+    keyboard: 'boolean',
+    slide: '(boolean|string)',
+    pause: '(string|boolean)',
+    wrap: 'boolean'
+  };
+
+  var Direction = {
+    NEXT: 'next',
+    PREV: 'prev',
+    LEFT: 'left',
+    RIGHT: 'right'
+  };
+
+  var Event = {
+    SLIDE: 'slide' + EVENT_KEY,
+    SLID: 'slid' + EVENT_KEY,
+    KEYDOWN: 'keydown' + EVENT_KEY,
+    MOUSEENTER: 'mouseenter' + EVENT_KEY,
+    MOUSELEAVE: 'mouseleave' + EVENT_KEY,
+    TOUCHEND: 'touchend' + EVENT_KEY,
+    LOAD_DATA_API: 'load' + EVENT_KEY + DATA_API_KEY,
+    CLICK_DATA_API: 'click' + EVENT_KEY + DATA_API_KEY
+  };
+
+  var ClassName = {
+    CAROUSEL: 'carousel',
+    ACTIVE: 'active',
+    SLIDE: 'slide',
+    RIGHT: 'carousel-item-right',
+    LEFT: 'carousel-item-left',
+    NEXT: 'carousel-item-next',
+    PREV: 'carousel-item-prev',
+    ITEM: 'carousel-item'
+  };
+
+  var Selector = {
+    ACTIVE: '.active',
+    ACTIVE_ITEM: '.active.carousel-item',
+    ITEM: '.carousel-item',
+    NEXT_PREV: '.carousel-item-next, .carousel-item-prev',
+    INDICATORS: '.carousel-indicators',
+    DATA_SLIDE: '[data-slide], [data-slide-to]',
+    DATA_RIDE: '[data-ride="carousel"]'
+
+    /**
+     * ------------------------------------------------------------------------
+     * Class Definition
+     * ------------------------------------------------------------------------
+     */
+
+  };
+  var Carousel = function () {
+    function Carousel(element, config) {
+      _classCallCheck(this, Carousel);
+
+      this._items = null;
+      this._interval = null;
+      this._activeElement = null;
+
+      this._isPaused = false;
+      this._isSliding = false;
+
+      this.touchTimeout = null;
+
+      this._config = this._getConfig(config);
+      this._element = $(element)[0];
+      this._indicatorsElement = $(this._element).find(Selector.INDICATORS)[0];
+
+      this._addEventListeners();
+    }
+
+    // Getters
+
+    _createClass(Carousel, [{
+      key: 'next',
 
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+      // Public
 
-/***/ }),
-/* 15 */
-/***/ (function(module, exports) {
-
-// FOLLOW SYSTEM
-$(document).on('click', '.follow', function () {
-    var elem = $(this).parent();
-    var data = $(this).data();
-    $.ajax({
-        headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
-        data: data,
-        type: 'POST',
-        url: '/follow_handler',
-        success: function success(data) {
-            if (data.success === true) {
-                elem.find('.follow').text('Отписаться');
-                console.log(data);
-            } else {
-                elem.find('.follow').text('Подписаться');
-                console.log(data);
-            }
+      value: function next() {
+        if (!this._isSliding) {
+          this._slide(Direction.NEXT);
         }
+      }
+    }, {
+      key: 'nextWhenVisible',
+      value: function nextWhenVisible() {
+        // Don't call next when the page isn't visible
+        // or the carousel or its parent isn't visible
+        if (!document.hidden && $(this._element).is(':visible') && $(this._element).css('visibility') !== 'hidden') {
+          this.next();
+        }
+      }
+    }, {
+      key: 'prev',
+      value: function prev() {
+        if (!this._isSliding) {
+          this._slide(Direction.PREV);
+        }
+      }
+    }, {
+      key: 'pause',
+      value: function pause(event) {
+        if (!event) {
+          this._isPaused = true;
+        }
+
+        if ($(this._element).find(Selector.NEXT_PREV)[0]) {
+          __WEBPACK_IMPORTED_MODULE_1__util__["default"].triggerTransitionEnd(this._element);
+          this.cycle(true);
+        }
+
+        clearInterval(this._interval);
+        this._interval = null;
+      }
+    }, {
+      key: 'cycle',
+      value: function cycle(event) {
+        if (!event) {
+          this._isPaused = false;
+        }
+
+        if (this._interval) {
+          clearInterval(this._interval);
+          this._interval = null;
+        }
+
+        if (this._config.interval && !this._isPaused) {
+          this._interval = setInterval((document.visibilityState ? this.nextWhenVisible : this.next).bind(this), this._config.interval);
+        }
+      }
+    }, {
+      key: 'to',
+      value: function to(index) {
+        var _this = this;
+
+        this._activeElement = $(this._element).find(Selector.ACTIVE_ITEM)[0];
+
+        var activeIndex = this._getItemIndex(this._activeElement);
+
+        if (index > this._items.length - 1 || index < 0) {
+          return;
+        }
+
+        if (this._isSliding) {
+          $(this._element).one(Event.SLID, function () {
+            return _this.to(index);
+          });
+          return;
+        }
+
+        if (activeIndex === index) {
+          this.pause();
+          this.cycle();
+          return;
+        }
+
+        var direction = index > activeIndex ? Direction.NEXT : Direction.PREV;
+
+        this._slide(direction, this._items[index]);
+      }
+    }, {
+      key: 'dispose',
+      value: function dispose() {
+        $(this._element).off(EVENT_KEY);
+        $.removeData(this._element, DATA_KEY);
+
+        this._items = null;
+        this._config = null;
+        this._element = null;
+        this._interval = null;
+        this._isPaused = null;
+        this._isSliding = null;
+        this._activeElement = null;
+        this._indicatorsElement = null;
+      }
+
+      // Private
+
+    }, {
+      key: '_getConfig',
+      value: function _getConfig(config) {
+        config = _extends({}, Default, config);
+        __WEBPACK_IMPORTED_MODULE_1__util__["default"].typeCheckConfig(NAME, config, DefaultType);
+        return config;
+      }
+    }, {
+      key: '_addEventListeners',
+      value: function _addEventListeners() {
+        var _this2 = this;
+
+        if (this._config.keyboard) {
+          $(this._element).on(Event.KEYDOWN, function (event) {
+            return _this2._keydown(event);
+          });
+        }
+
+        if (this._config.pause === 'hover') {
+          $(this._element).on(Event.MOUSEENTER, function (event) {
+            return _this2.pause(event);
+          }).on(Event.MOUSELEAVE, function (event) {
+            return _this2.cycle(event);
+          });
+          if ('ontouchstart' in document.documentElement) {
+            // If it's a touch-enabled device, mouseenter/leave are fired as
+            // part of the mouse compatibility events on first tap - the carousel
+            // would stop cycling until user tapped out of it;
+            // here, we listen for touchend, explicitly pause the carousel
+            // (as if it's the second time we tap on it, mouseenter compat event
+            // is NOT fired) and after a timeout (to allow for mouse compatibility
+            // events to fire) we explicitly restart cycling
+            $(this._element).on(Event.TOUCHEND, function () {
+              _this2.pause();
+              if (_this2.touchTimeout) {
+                clearTimeout(_this2.touchTimeout);
+              }
+              _this2.touchTimeout = setTimeout(function (event) {
+                return _this2.cycle(event);
+              }, TOUCHEVENT_COMPAT_WAIT + _this2._config.interval);
+            });
+          }
+        }
+      }
+    }, {
+      key: '_keydown',
+      value: function _keydown(event) {
+        if (/input|textarea/i.test(event.target.tagName)) {
+          return;
+        }
+
+        switch (event.which) {
+          case ARROW_LEFT_KEYCODE:
+            event.preventDefault();
+            this.prev();
+            break;
+          case ARROW_RIGHT_KEYCODE:
+            event.preventDefault();
+            this.next();
+            break;
+          default:
+        }
+      }
+    }, {
+      key: '_getItemIndex',
+      value: function _getItemIndex(element) {
+        this._items = $.makeArray($(element).parent().find(Selector.ITEM));
+        return this._items.indexOf(element);
+      }
+    }, {
+      key: '_getItemByDirection',
+      value: function _getItemByDirection(direction, activeElement) {
+        var isNextDirection = direction === Direction.NEXT;
+        var isPrevDirection = direction === Direction.PREV;
+        var activeIndex = this._getItemIndex(activeElement);
+        var lastItemIndex = this._items.length - 1;
+        var isGoingToWrap = isPrevDirection && activeIndex === 0 || isNextDirection && activeIndex === lastItemIndex;
+
+        if (isGoingToWrap && !this._config.wrap) {
+          return activeElement;
+        }
+
+        var delta = direction === Direction.PREV ? -1 : 1;
+        var itemIndex = (activeIndex + delta) % this._items.length;
+
+        return itemIndex === -1 ? this._items[this._items.length - 1] : this._items[itemIndex];
+      }
+    }, {
+      key: '_triggerSlideEvent',
+      value: function _triggerSlideEvent(relatedTarget, eventDirectionName) {
+        var targetIndex = this._getItemIndex(relatedTarget);
+        var fromIndex = this._getItemIndex($(this._element).find(Selector.ACTIVE_ITEM)[0]);
+        var slideEvent = $.Event(Event.SLIDE, {
+          relatedTarget: relatedTarget,
+          direction: eventDirectionName,
+          from: fromIndex,
+          to: targetIndex
+        });
+
+        $(this._element).trigger(slideEvent);
+
+        return slideEvent;
+      }
+    }, {
+      key: '_setActiveIndicatorElement',
+      value: function _setActiveIndicatorElement(element) {
+        if (this._indicatorsElement) {
+          $(this._indicatorsElement).find(Selector.ACTIVE).removeClass(ClassName.ACTIVE);
+
+          var nextIndicator = this._indicatorsElement.children[this._getItemIndex(element)];
+
+          if (nextIndicator) {
+            $(nextIndicator).addClass(ClassName.ACTIVE);
+          }
+        }
+      }
+    }, {
+      key: '_slide',
+      value: function _slide(direction, element) {
+        var _this3 = this;
+
+        var activeElement = $(this._element).find(Selector.ACTIVE_ITEM)[0];
+        var activeElementIndex = this._getItemIndex(activeElement);
+        var nextElement = element || activeElement && this._getItemByDirection(direction, activeElement);
+        var nextElementIndex = this._getItemIndex(nextElement);
+        var isCycling = Boolean(this._interval);
+
+        var directionalClassName = void 0;
+        var orderClassName = void 0;
+        var eventDirectionName = void 0;
+
+        if (direction === Direction.NEXT) {
+          directionalClassName = ClassName.LEFT;
+          orderClassName = ClassName.NEXT;
+          eventDirectionName = Direction.LEFT;
+        } else {
+          directionalClassName = ClassName.RIGHT;
+          orderClassName = ClassName.PREV;
+          eventDirectionName = Direction.RIGHT;
+        }
+
+        if (nextElement && $(nextElement).hasClass(ClassName.ACTIVE)) {
+          this._isSliding = false;
+          return;
+        }
+
+        var slideEvent = this._triggerSlideEvent(nextElement, eventDirectionName);
+        if (slideEvent.isDefaultPrevented()) {
+          return;
+        }
+
+        if (!activeElement || !nextElement) {
+          // Some weirdness is happening, so we bail
+          return;
+        }
+
+        this._isSliding = true;
+
+        if (isCycling) {
+          this.pause();
+        }
+
+        this._setActiveIndicatorElement(nextElement);
+
+        var slidEvent = $.Event(Event.SLID, {
+          relatedTarget: nextElement,
+          direction: eventDirectionName,
+          from: activeElementIndex,
+          to: nextElementIndex
+        });
+
+        if ($(this._element).hasClass(ClassName.SLIDE)) {
+          $(nextElement).addClass(orderClassName);
+
+          __WEBPACK_IMPORTED_MODULE_1__util__["default"].reflow(nextElement);
+
+          $(activeElement).addClass(directionalClassName);
+          $(nextElement).addClass(directionalClassName);
+
+          var transitionDuration = __WEBPACK_IMPORTED_MODULE_1__util__["default"].getTransitionDurationFromElement(activeElement);
+
+          $(activeElement).one(__WEBPACK_IMPORTED_MODULE_1__util__["default"].TRANSITION_END, function () {
+            $(nextElement).removeClass(directionalClassName + ' ' + orderClassName).addClass(ClassName.ACTIVE);
+
+            $(activeElement).removeClass(ClassName.ACTIVE + ' ' + orderClassName + ' ' + directionalClassName);
+
+            _this3._isSliding = false;
+
+            setTimeout(function () {
+              return $(_this3._element).trigger(slidEvent);
+            }, 0);
+          }).emulateTransitionEnd(transitionDuration);
+        } else {
+          $(activeElement).removeClass(ClassName.ACTIVE);
+          $(nextElement).addClass(ClassName.ACTIVE);
+
+          this._isSliding = false;
+          $(this._element).trigger(slidEvent);
+        }
+
+        if (isCycling) {
+          this.cycle();
+        }
+      }
+
+      // Static
+
+    }], [{
+      key: '_jQueryInterface',
+      value: function _jQueryInterface(config) {
+        return this.each(function () {
+          var data = $(this).data(DATA_KEY);
+          var _config = _extends({}, Default, $(this).data());
+
+          if ((typeof config === 'undefined' ? 'undefined' : _typeof(config)) === 'object') {
+            _config = _extends({}, _config, config);
+          }
+
+          var action = typeof config === 'string' ? config : _config.slide;
+
+          if (!data) {
+            data = new Carousel(this, _config);
+            $(this).data(DATA_KEY, data);
+          }
+
+          if (typeof config === 'number') {
+            data.to(config);
+          } else if (typeof action === 'string') {
+            if (typeof data[action] === 'undefined') {
+              throw new TypeError('No method named "' + action + '"');
+            }
+            data[action]();
+          } else if (_config.interval) {
+            data.pause();
+            data.cycle();
+          }
+        });
+      }
+    }, {
+      key: '_dataApiClickHandler',
+      value: function _dataApiClickHandler(event) {
+        var selector = __WEBPACK_IMPORTED_MODULE_1__util__["default"].getSelectorFromElement(this);
+
+        if (!selector) {
+          return;
+        }
+
+        var target = $(selector)[0];
+
+        if (!target || !$(target).hasClass(ClassName.CAROUSEL)) {
+          return;
+        }
+
+        var config = _extends({}, $(target).data(), $(this).data());
+        var slideIndex = this.getAttribute('data-slide-to');
+
+        if (slideIndex) {
+          config.interval = false;
+        }
+
+        Carousel._jQueryInterface.call($(target), config);
+
+        if (slideIndex) {
+          $(target).data(DATA_KEY).to(slideIndex);
+        }
+
+        event.preventDefault();
+      }
+    }, {
+      key: 'VERSION',
+      get: function get() {
+        return VERSION;
+      }
+    }, {
+      key: 'Default',
+      get: function get() {
+        return Default;
+      }
+    }]);
+
+    return Carousel;
+  }();
+
+  /**
+   * ------------------------------------------------------------------------
+   * Data Api implementation
+   * ------------------------------------------------------------------------
+   */
+
+  $(document).on(Event.CLICK_DATA_API, Selector.DATA_SLIDE, Carousel._dataApiClickHandler);
+
+  $(window).on(Event.LOAD_DATA_API, function () {
+    $(Selector.DATA_RIDE).each(function () {
+      var $carousel = $(this);
+      Carousel._jQueryInterface.call($carousel, $carousel.data());
     });
+  });
 
-    event.preventDefault();
-});
+  /**
+   * ------------------------------------------------------------------------
+   * jQuery
+   * ------------------------------------------------------------------------
+   */
 
-/***/ }),
-/* 16 */
-/***/ (function(module, exports) {
+  $.fn[NAME] = Carousel._jQueryInterface;
+  $.fn[NAME].Constructor = Carousel;
+  $.fn[NAME].noConflict = function () {
+    $.fn[NAME] = JQUERY_NO_CONFLICT;
+    return Carousel._jQueryInterface;
+  };
 
-// removed by extract-text-webpack-plugin
+  return Carousel;
+}(__WEBPACK_IMPORTED_MODULE_0_jquery___default.a);
 
-/***/ }),
-/* 17 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 18 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 19 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 20 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 21 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
+/* harmony default export */ __webpack_exports__["default"] = (Carousel);
 
 /***/ })
-/******/ ]);
+
+/******/ });

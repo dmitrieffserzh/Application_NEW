@@ -4,9 +4,7 @@
 
 @extends('layouts.aside-left')
 <style>
-    body {
-        padding-top: 50px !important;
-    }
+
     .bg-profile {
         /*background: -moz-linear-gradient(45deg, rgba(0, 233, 255, 0.7) 0%, rgba(209, 0, 212, 0.85) 100%), url("{{ getImage('cover', $user->profile->avatar) }}") no-repeat center center;
         background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(0, 143, 212, 0.77)), color-stop(100%, rgba(209, 0, 212, 0.85))), url("{{ getImage('cover', $user->profile->avatar) }}") no-repeat center center;
@@ -27,7 +25,7 @@
 </style>
 
 @section('content')
-    <main id="content" class="col-md-8 mb-3 p-0 bg-white rounded shadow ow-h">
+    <main id="content" class="col-md-9 mb-3 p-0 bg-white rounded shadow ow-h">
         <section class="section profile ow-h">
             <div class="profile-header bg-profile pt-5 pb-5 p-md-0">
                 <div class="row no-gutters text-center text-md-left">
@@ -171,7 +169,7 @@
 
 
 @section('aside')
-    <aside class="col-md-4">
+    <aside class="col-md-3">
         <ul>
             <li><a href="{{ route('users.list') }}">Пользователи</a></li>
             <li><a href="{{ route('news.index') }}">Новости</a></li>

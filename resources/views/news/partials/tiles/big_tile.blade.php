@@ -1,4 +1,4 @@
-<article class="news news-tile news-tile__wide">
+<article class="news news-tile news-tile__wide bg-white shadow">
     <span class="news-tile__bg"></span>
     <header class="news-tile__wide-header">
 
@@ -19,7 +19,7 @@
 
     <img src="{{ getImage('news', $content->image) }}" width="100%">
     <footer class="news-tile__wide-footer">
-        <span class="d-inline-block position-relative mr-2">
+        <!--<span class="d-inline-block position-relative mr-2">
 
             <img class="rounded-circle" style="width: 40px; height: 40px;"
                         src="{{ getImage('thumbnail', $content->owner->profile->avatar) }}"
@@ -29,6 +29,6 @@
            title="{{ $content->owner->nickname }}">
             {{ $content->owner->nickname }}
         </a>
-
+-->
     </footer>
 </article>

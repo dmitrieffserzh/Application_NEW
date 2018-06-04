@@ -31,7 +31,7 @@ class ImageController extends Controller {
 			$destinationPath = public_path('uploads'.DIRECTORY_SEPARATOR.'images'.DIRECTORY_SEPARATOR.'news');
 			$img = Image::make($image->getRealPath());
 			// $img->crop(100, 100, 0, 0)->save($destinationPath.'/'.$input['image']);
-			$img->fit(800, 400)->save($destinationPath.DIRECTORY_SEPARATOR.$input['image']);
+			$img->fit(800, 460)->save($destinationPath.DIRECTORY_SEPARATOR.$input['image']);
 
 
 			// ORIGINAL

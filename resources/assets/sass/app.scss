@@ -7,7 +7,8 @@
 
 body {
   padding-top: 140px;
-  background: #fff !important;
+  //background: #fbfcff !important;
+  background: #fdfdfd !important;
 }
 
 .lh-100 {
@@ -452,10 +453,22 @@ body {
 
 
 .navbar-light {
-  background: #ff6062;
-  background: -webkit-linear-gradient(right, #fe4c7d 0%, #FF6062 100%);
-  background: -o-linear-gradient(right, #fe4c7d 0%, #FF6062 100%);
-  background: linear-gradient(to left, #fe4c7d 0%, #ff6062 100%);
+  //background: #ff6062;
+  //background: -webkit-linear-gradient(right, #fe4c7d 0%, #FF6062 100%);
+  //background: -o-linear-gradient(right, #fe4c7d 0%, #FF6062 100%);
+  //background: linear-gradient(to left, #fe4c7d 0%, #ff6062 100%);
+
+
+  //background: #373a50;
+  //background: -webkit-linear-gradient(right, #373a50 0%, #292e3c 100%);
+  //background: -o-linear-gradient(right, #373a50 0%, #292e3c 100%);
+  //background: linear-gradient(to left, #373a50 0%, #292e3c 100%);
+
+
+  background: #7012ec;
+  background: -webkit-linear-gradient(right, #00fff4 0%, #7012ec 100%);
+  background: -o-linear-gradient(right, #00fff4 0%, #7012ec 100%);
+  background: linear-gradient(to left, #00fff4 0%, #7012ec 100%);
 }
 .navbar-brand {
   color: #fff !important;
@@ -497,7 +510,7 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 1px;
+    height: 2px;
     background: #fe4c7d;
   }
 }
@@ -511,8 +524,8 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 1px;
-    background: #FF6062;
+    height: 2px;
+    background: #bc87ff;
   }
 }
 
@@ -526,9 +539,10 @@ body {
 
 
 .news {
+  overflow: hidden;
   &-tile {
     position: relative;
-    margin-bottom: 30px;
+    //margin-bottom: 30px;
     &:hover .news-tile__bg {
       opacity: .7;
       transition: .3s;
@@ -563,5 +577,16 @@ body {
       }
     }
 
+  }
+}
+
+
+
+.aside-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  & a {
+    color: #000;
   }
 }

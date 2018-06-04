@@ -6787,7 +6787,7 @@ button.close {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 15%;
+  width: 10%;
   color: #fff;
   text-align: center;
   opacity: 0.5;
@@ -6845,8 +6845,8 @@ button.close {
       -ms-flex-pack: center;
           justify-content: center;
   padding-left: 0;
-  margin-right: 15%;
-  margin-left: 15%;
+  margin-right: 10%;
+  margin-left: 10%;
   list-style: none;
 }
 
@@ -10519,7 +10519,7 @@ a.text-dark:focus {
 
 body {
   padding-top: 140px;
-  background: #fff !important;
+  background: #fdfdfd !important;
 }
 
 .lh-100 {
@@ -10792,9 +10792,9 @@ body {
 }
 
 .navbar-light {
-  background: #ff6062;
-  background: -webkit-gradient(linear, right top, left top, from(#fe4c7d), to(#ff6062));
-  background: linear-gradient(to left, #fe4c7d 0%, #ff6062 100%);
+  background: #7012ec;
+  background: -webkit-gradient(linear, right top, left top, from(#00fff4), to(#7012ec));
+  background: linear-gradient(to left, #00fff4 0%, #7012ec 100%);
 }
 
 .navbar-brand {
@@ -10837,7 +10837,7 @@ body {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 1px;
+  height: 2px;
   background: #fe4c7d;
 }
 
@@ -10851,8 +10851,8 @@ body {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 1px;
-  background: #FF6062;
+  height: 2px;
+  background: #bc87ff;
 }
 
 .nav-underline .active {
@@ -10860,9 +10860,12 @@ body {
   color: #000000;
 }
 
+.news {
+  overflow: hidden;
+}
+
 .news-tile {
   position: relative;
-  margin-bottom: 30px;
 }
 
 .news-tile:hover .news-tile__bg {
@@ -10901,5 +10904,15 @@ body {
   position: absolute;
   bottom: 0;
   padding: 30px;
+}
+
+.aside-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.aside-menu a {
+  color: #000;
 }
 

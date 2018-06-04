@@ -6,7 +6,7 @@
 
 @section('content')
 
-    <main id="content" class="col-md-8 mb-3 p-3 bg-white rounded shadow">
+    <main id="content" class="col-md-8 py-4 border-right border-gray">
         <div class="row">
             <section class="section col p-0">
                 <div class="media pb-3 px-3 border-bottom border-gray lh-100">
@@ -55,15 +55,18 @@
 @endsection
 
 @section('aside')
-    <aside class="col-md-4">
-        <ul>
+    <aside class="col-md-3 py-4">
+
+        <h6 class="text-uppercase border-bottom border-gray pb-2 text-primary">Боковая колонка</h6>
+        <ul class="aside-menu">
             <li><a href="{{ route('users.list') }}">Пользователи</a></li>
             <li><a href="{{ route('news.index') }}">Новости</a></li>
             <li><a href="{{ route('stories.index') }}">Истории</a></li>
 
             <!-- Authentication Links -->
             @if (Auth::guest())
-                <li><a href="{{ route('login') }}" class="ajax-modal main-menu__link" data-toggle="modal" data-url="{{ route('login') }}" data-name="Войти" data-modal-size="modal-sm">Войти</a></li>
+                <li><a href="{{ route('login') }}" class="ajax-modal main-menu__link" data-toggle="modal"
+                       data-url="{{ route('login') }}" data-name="Войти" data-modal-size="modal-sm">Войти</a></li>
                 <li><a href="{{ route('register') }}">Регистрация</a></li>
             @else
                 <li>
