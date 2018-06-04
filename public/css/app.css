@@ -10520,6 +10520,7 @@ a.text-dark:focus {
 body {
   padding-top: 140px;
   background: #fdfdfd !important;
+  font-size: 15px !important;
 }
 
 .lh-100 {
