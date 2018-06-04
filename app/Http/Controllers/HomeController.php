@@ -25,7 +25,7 @@ class HomeController extends Controller
     public function index() {
 
         $post = Post::take(5)->get();
-        $hot_posts = Post::take(10)->get();
+        $hot_posts = Post::take(5)->get();
 
 
         return view('home', [
