@@ -208,7 +208,7 @@
 </div>
 
 {{-- footer --}}
-<footer class="footer">
+<footer class="footer mt-5">
 
 </footer>
 
