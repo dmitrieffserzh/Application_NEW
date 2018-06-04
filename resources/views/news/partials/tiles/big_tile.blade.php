@@ -1,4 +1,4 @@
-<article class="news news-tile news-tile__wide bg-white shadow">
+<article class="news news-tile news-tile__wide">
     <span class="news-tile__bg"></span>
     <header class="news-tile__wide-header">
 

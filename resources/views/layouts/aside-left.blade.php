@@ -31,7 +31,7 @@
         <div class="container">
             <a href="{{ route('home') }}" class="navbar-brand mb-0 h1 d-inline-block" style="font-weight:900;">LOGO</a>
 
-            <ul class="main-menu d-block">
+            <ul class="main-menu d-none d-md-block">
                 <li class="main-menu__item{{ is_active('news.*') }}">
                     <a href="{{ route('news.index') }}" class="main-menu__link">Новости</a>
                 </li>

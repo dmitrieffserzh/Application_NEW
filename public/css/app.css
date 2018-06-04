@@ -10891,7 +10891,7 @@ body {
 .news-tile__wide-header {
   position: absolute;
   top: 0;
-  padding: 30px;
+  padding: 15px;
   width: 100%;
 }
 
@@ -10904,6 +10904,10 @@ body {
   position: absolute;
   bottom: 0;
   padding: 30px;
+}
+
+.news-tile__wide-category {
+  font-size: 10px;
 }
 
 .aside-menu {
