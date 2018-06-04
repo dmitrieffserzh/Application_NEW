@@ -5,7 +5,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <main id="content" class="col-md-8">
+    <main id="content" class="col-md-9">
         <div class="row">
             <section class="section col p-0">
                 @if(Session::has('success'))
@@ -29,7 +29,7 @@
 
 
 @section('aside')
-    <aside class="col-md-4">
+    <aside class="col-md-3">
         <ul>
             <li><a href="{{ route('users.list') }}">Пользователи</a></li>
             <li><a href="{{ route('news.index') }}">Новости</a></li>

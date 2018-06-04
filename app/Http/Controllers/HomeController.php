@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -21,8 +22,13 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        return view('home');
+    public function index() {
+
+        $post = Post::take(5)->get();
+
+
+        return view('home', [
+            'posts' => $post
+        ]);
     }
 }

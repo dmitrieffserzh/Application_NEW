@@ -4,14 +4,22 @@
 
 @extends('layouts.aside-left')
 <style>
+    body {
+        padding-top: 50px !important;
+    }
     .bg-profile {
-        background: -moz-linear-gradient(45deg, rgba(0, 233, 255, 0.7) 0%, rgba(209, 0, 212, 0.85) 100%), url("{{ getImage('cover', $user->profile->avatar) }}") no-repeat center center;
+        /*background: -moz-linear-gradient(45deg, rgba(0, 233, 255, 0.7) 0%, rgba(209, 0, 212, 0.85) 100%), url("{{ getImage('cover', $user->profile->avatar) }}") no-repeat center center;
         background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(0, 143, 212, 0.77)), color-stop(100%, rgba(209, 0, 212, 0.85))), url("{{ getImage('cover', $user->profile->avatar) }}") no-repeat center center;
         background: -webkit-linear-gradient(45deg, rgba(0, 233, 255, 0.7) 0%, rgba(209, 0, 212, 0.85) 100%), url("{{ getImage('cover', $user->profile->avatar) }}") no-repeat center center;
         background: -o-linear-gradient(45deg, rgba(0, 233, 255, 0.7) 0%, rgba(209, 0, 212, 0.85) 100%), url("{{ getImage('cover', $user->profile->avatar) }}") no-repeat center center;
         background: -ms-linear-gradient(45deg, rgba(0, 233, 255, 0.7) 0%, rgba(209, 0, 212, 0.85) 100%), url("{{ getImage('cover', $user->profile->avatar) }}") no-repeat center center;
         background: linear-gradient(45deg, rgba(0, 233, 255, 0.7) 0%, rgba(209, 0, 212, 0.85) 100%), url("{{ getImage('cover', $user->profile->avatar) }}") no-repeat center center;
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=rgba(0, 233, 255, 0.7), endColorstr=rgba(209, 0, 212, 0.85), GradientType=1);
+        */
+        background: #ff6062;
+        background: -webkit-linear-gradient(right, rgba(254, 76, 125, 0.69) 0%, rgba(255, 96, 98, 0.82) 100%), url("{{ getImage('cover', $user->profile->avatar) }}") no-repeat center center;
+        background: -o-linear-gradient(right, rgba(254, 76, 125, 0.69) 0%, rgba(255, 96, 98, 0.82) 100%), url("{{ getImage('cover', $user->profile->avatar) }}") no-repeat center center;
+        background: linear-gradient(to left, rgba(254, 76, 125, 0.69) 0%, rgba(255, 96, 98, 0.82) 100%), url("{{ getImage('cover', $user->profile->avatar) }}") no-repeat center center;
         width: 100%;
         height: auto;
         background-size: cover;
@@ -54,19 +62,6 @@
                             </span>
                         @endif
 
-                        <div class="btn btn-dark btn-sm mt-3" style="width: 130px;">
-                            <span class="h4">{{$user->posts($user->id)->count() }}</span>
-                            <span class="d-block small text-lowercase">Постов</span>
-                        </div>
-                        <div class="btn btn-dark btn-sm mt-3" style="width: 130px;">
-                            <span class="h4">{{$user->followers($user->id)->count() }}</span>
-                            <span class="d-block small text-lowercase">Подписчиков</span>
-                        </div>
-                        <div class="btn btn-dark btn-sm mt-3" style="width: 130px;">
-                            <span class="h4">{{$user->followings($user->id)->count() }}</span>
-                            <span class="d-block small text-lowercase">Подписки</span>
-                        </div>
-                    </div>
                 </div>
 
                 {{----}}
@@ -82,7 +77,7 @@
 
 
             </div>
-
+            </div>
             <div class="text-center mb-5" style="margin-top: -18px">
                 @if(Auth::check() && Auth::id()!= $user->id)
                     <a href="#" class="follow btn btn-primary shadow-lg" data-id="{{ $user->id }}" style="text-transform:lowercase;width: 150px">
@@ -94,14 +89,28 @@
                     </a>
                 @endif
             </div>
-
-
-
+            <div class="btn-group d-block">
+                <div class="btn btn-sm mt-3" style="width: 32%;">
+                    <span class="h2" style="color: #fe4c7d;font-weight: 900">{{$user->posts($user->id)->count() }}</span>
+                    <span class="d-block text-muted small text-lowercase">Публикаций</span>
+                </div>
+                <div class="btn btn-sm mt-3" style="width: 33%;">
+                    <span class="h2" style="color: #fe4c7d;font-weight: 900">{{$user->followers($user->id)->count() }}</span>
+                    <span class="d-block small text-muted text-lowercase">Подписчиков</span>
+                </div>
+                <div class="btn btn-sm mt-3" style="width: 33%;">
+                    <span class="h2" style="color: #fe4c7d;font-weight: 900">{{$user->followings($user->id)->count() }}</span>
+                    <span class="d-block text-muted small text-lowercase">Подписки</span>
+                </div>
+            </div>
+<!--
             <div class="p3">
                 <button class="ajax-modal btn btn-outline-info btn-sm m-1" data-modal-size="modal-sm" data-name="Удалить запись" data-url="#" data-content="Тест модального окна и текста в нем!!<a href='#'>ссыль</a>">Маленькое окно</button>
                 <a href="#" class="ajax-modal btn btn-outline-primary btn-sm m-1" data-name="Подписаться на пользователя" data-url="#" data-content="Тест модального окна и текста в нем!! ссылочка">Среднее окно</a>
                 <button class="ajax-modal btn btn-outline-danger btn-sm m-1" data-modal-size="modal-lg" data-name="Удалить запись" data-url="#" data-content="Тест модального окна и текста в нем!!<a href='#'>ссыль</a>">Большое окно</button>
             </div>
+
+            -->
             <div class="profile-info mt-3 p-3">
                 <h2 class="h6 py-2 border-bottom border-gray">Информация</h2>
 

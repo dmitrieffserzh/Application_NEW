@@ -26,12 +26,16 @@
 </head>
 <body class="body">
 
-<header class="header">
-    <nav class="navbar navbar-expand-md fixed-top navbar-light bg-white shadow">
-        <div class="container">
-            <span class="navbar-brand mb-0 h1"  style="font-weight:900;">LOGO</span>
+<header class="header fixed-top mb-3">
 
-            <ul class="main-menu">
+    <nav class="navbar navbar-expand-md navbar-light bg-white shadow">
+        <div class="container">
+
+<!--
+            <ul class="main-menu d-block">
+                <li class="main-menu__item{{ is_active('home') }}">
+                    <a href="{{ route('home') }}" class="main-menu__link">Главная</a>
+                </li>
                 <li class="main-menu__item{{ is_active('news.*') }}">
                     <a href="{{ route('news.index') }}" class="main-menu__link">Новости</a>
                 </li>
@@ -43,13 +47,71 @@
                 </li>
             </ul>
 
+-->
+    <span class="navbar-brand mb-0 h1"  style="font-weight:900;">LOGO</span>
             <button type="button" class="main-menu__button">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+
         </div>
     </nav>
+        <div class="nav-scroller bg-white shadow">
+            <div class="container">
+                <div class="row">
+                    <nav class="nav nav-underline">
+                        <a class="nav-link" href="#">Общество</a>
+                        <a class="nav-link" href="#">Дети</a>
+                        <a class="nav-link" href="#">Семья</a>
+                        <a class="nav-link" href="#">Мода</a>
+                        <a class="nav-link" href="#">Покупки</a>
+                        <a class="nav-link" href="#">Здоровье</a>
+                        <a class="nav-link" href="#">Мужчины</a>
+                        <a class="nav-link" href="#">Отношения</a>
+                        <a class="nav-link" href="#">Психология</a>
+                        <a class="nav-link" href="#">Развлечения</a>
+                        <a class="nav-link" href="#">Спорт</a>
+                        <a class="nav-link" href="#">Диеты</a>
+                        <a class="nav-link" href="#">Звезды</a>
+                        <a class="nav-link{{ is_active('home') }}" href="{{ route('home') }}">Главная</a>
+                        <a class="nav-link{{ is_active('news.*') }}" href="{{ route('news.index') }}">Новости</a>
+                        <a class="nav-link{{ is_active('stories.*') }}" href="{{ route('stories.index') }}">Истории</a>
+                        <a class="nav-link{{ is_active('users.*') }}" href="{{ route('users.list') }}">Пользователи</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+
+            jQuery(document).ready(function($) {
+                var totalWidth = $(".nav").outerWidth();
+                $('.nav a').css('width', totalWidth);
+                var myScrollPos = $('.nav .active').offset().left + $('.nav .active').outerWidth(true) / 2 +
+                    $('.nav').scrollLeft() - $('.nav').width() / 2;
+                $('.nav').scrollLeft(myScrollPos);
+
+
+                $(window).on("orientationchange",function(){
+                    var totalWidth = $(".nav").outerWidth();
+
+                    $('.nav a').css('width', totalWidth);
+
+                    var myScrollPos = $('.nav .active').offset().left + $('.nav .active').outerWidth(true) / 2 +
+                        $('.nav').scrollLeft() - $('.nav').width() / 2;
+
+                    $('.nav').scrollLeft(myScrollPos);
+
+                });
+            });
+
+
+        </script>
+
+
+
     <div class="container">
         {{--<div class="logo">LOGO</div>--}}
         {{--<div id="menu-container" class="menu-container">--}}

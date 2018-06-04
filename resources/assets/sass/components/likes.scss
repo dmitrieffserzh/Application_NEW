@@ -29,7 +29,8 @@
         animation: like--true .2s normal;
       }
       &--false {
-        fill: #cad0dc !important;
+        //fill: #cad0dc !important;
+        fill: none;
         stroke: #cad0dc !important;
         -webkit-animation: like--false .2s normal;
         -moz-animation: like--false .2s normal;

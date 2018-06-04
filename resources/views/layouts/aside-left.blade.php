@@ -26,12 +26,15 @@
 </head>
 <body class="body">
 
-<header class="header">
-    <nav class="navbar navbar-expand-md fixed-top navbar-light bg-white shadow">
+<header class="header fixed-top">
+    <nav class="navbar navbar-expand-md navbar-light bg-white shadow">
         <div class="container">
-            <span class="navbar-brand mb-0 h1"  style="font-weight:900;">LOGO</span>
 
-            <ul class="main-menu">
+        <!--
+            <ul class="main-menu d-block">
+                <li class="main-menu__item{{ is_active('home') }}">
+                    <a href="{{ route('home') }}" class="main-menu__link">Главная</a>
+                </li>
                 <li class="main-menu__item{{ is_active('news.*') }}">
                     <a href="{{ route('news.index') }}" class="main-menu__link">Новости</a>
                 </li>
@@ -43,13 +46,84 @@
                 </li>
             </ul>
 
+-->
+            <span class="navbar-brand mb-0 h1"  style="font-weight:900;">LOGO</span>
             <button type="button" class="main-menu__button">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+
         </div>
     </nav>
+    <div class="nav-scroller bg-white shadow">
+        <div class="container">
+            <div class="row">
+                <nav class="nav nav-underline">
+                    <a class="nav-link active" href="#">#общество</a>
+                    <a class="nav-link" href="#">#дети
+                        <span class="badge badge-pill bg-light align-text-bottom">346</span>
+                    </a>
+                    <a class="nav-link" href="#">#семья
+                        <span class="badge badge-pill bg-light align-text-bottom">247</span></a>
+                    <a class="nav-link" href="#">#мода
+                        <span class="badge badge-pill bg-light align-text-bottom">17</span></a>
+                    <a class="nav-link" href="#">#покупки
+                        <span class="badge badge-pill bg-light align-text-bottom">797</span></a>
+                    <a class="nav-link" href="#">#здоровье
+                        <span class="badge badge-pill bg-light align-text-bottom">67</span></a>
+                    <a class="nav-link" href="#">#мужчины
+                        <span class="badge badge-pill bg-light align-text-bottom">147</span></a>
+                    <a class="nav-link" href="#">#отношения
+                        <span class="badge badge-pill bg-light align-text-bottom">897</span></a>
+                    <a class="nav-link" href="#">#психология
+                        <span class="badge badge-pill bg-light align-text-bottom">337</span></a>
+                    <a class="nav-link" href="#">#развлечения
+                        <span class="badge badge-pill bg-light align-text-bottom">97</span></a>
+                    <a class="nav-link" href="#">#спорт
+                        <span class="badge badge-pill bg-light align-text-bottom">237</span></a>
+                    <a class="nav-link" href="#">#диеты
+                        <span class="badge badge-pill bg-light align-text-bottom">5437</span></a>
+                    <a class="nav-link" href="#">#звезды
+                        <span class="badge badge-pill bg-light align-text-bottom">637</span></a>
+                    <a class="nav-link{{ is_active('home') }}" href="{{ route('home') }}">Главная</a>
+                    <a class="nav-link{{ is_active('news.*') }}" href="{{ route('news.index') }}">Новости</a>
+                    <a class="nav-link{{ is_active('stories.*') }}" href="{{ route('stories.index') }}">Истории</a>
+                    <a class="nav-link{{ is_active('users.*') }}" href="{{ route('users.list') }}">Пользователи</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        jQuery(document).ready(function($) {
+            var totalWidth = $(".nav").outerWidth();
+            $('.nav a').css('width', totalWidth);
+            var myScrollPos = $('.nav .active').offset().left + $('.nav .active').outerWidth(true) / 2 +
+                $('.nav').scrollLeft() - $('.nav').width() / 2;
+            $('.nav').scrollLeft(myScrollPos);
+
+
+            $(window).on("orientationchange",function(){
+                var totalWidth = $(".nav").outerWidth();
+
+                $('.nav a').css('width', totalWidth);
+
+                var myScrollPos = $('.nav .active').offset().left + $('.nav .active').outerWidth(true) / 2 +
+                    $('.nav').scrollLeft() - $('.nav').width() / 2;
+
+                $('.nav').scrollLeft(myScrollPos);
+
+            });
+        });
+
+
+    </script>
+
+
+
     <div class="container">
         {{--<div class="logo">LOGO</div>--}}
         {{--<div id="menu-container" class="menu-container">--}}

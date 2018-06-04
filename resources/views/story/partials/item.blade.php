@@ -1,4 +1,4 @@
-<article class="article mb-3 pt-3 pb-3 bg-white rounded shadow">
+<article class="article mb-3 pt-3 pb-2 bg-white rounded shadow">
     <header class="article-header">
         <div class="media pb-3 px-3 border-bottom border-gray lh-100">
                <span class="d-inline-block position-relative mr-2">
@@ -37,7 +37,7 @@
     <div class="article-content">
         {!! $post->content !!}
     </div>
-    <footer class="article-footer pt-3 px-3 border-top border-gray lh-100">
+    <footer class="article-footer pt-2 px-3 border-top border-gray lh-100">
 
         @include('components.comments.comments_count', ['content'=>$post])
         @include('components.views.view_count', ['content'=>$post])
