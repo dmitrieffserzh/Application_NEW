@@ -16,6 +16,7 @@ require('./components/modal.js');
 require('./components/modal-ajax.js');
 require('./components/follow.js');
 require('./components/carousel.js');
+require('./components/dropdown.js');
 
 
 /**

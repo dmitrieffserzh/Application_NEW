@@ -34,6 +34,7 @@ mix.js('resources/assets/js/app.js', 'public/js')
     .sass('resources/assets/sass/components/likes.scss', 'public/css/components')
     .sass('resources/assets/sass/components/views.scss', 'public/css/components')
     .sass('resources/assets/sass/components/comments.scss', 'public/css/components')
+    .sass('resources/assets/sass/components/users.scss', 'public/css/components')
     // ADMIN
     .sass('resources/assets/sass/admin/admin.scss', 'public/css/admin')
     .sass('resources/assets/sass/admin/components/jq_minicolors.scss', 'public/css/admin/components');

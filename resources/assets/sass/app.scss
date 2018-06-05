@@ -6,9 +6,10 @@
 
 
 body {
+  position: relative;
   padding-top: 140px;
   //background: #fbfcff !important;
-  background: #fdfdfd !important;
+  background: #fafbfd !important;
   font-size: 15px !important;
 }
 
@@ -31,10 +32,86 @@ body {
 
 /* HEADER >> ================================================================ */
 .header {
-  background: #1b1e21;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #324558;
+  z-index: 100;
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+
+  & .brand {
+    display: inline-block;
+    float: left;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    color: #fff;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+  }
 }
 
+.nav {
+  display: inline-block;
+  float: left;
+  &-menu {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    &__item {
+      display: inline-block;
+      position: relative;
+      &-link {
+        display: block;
+        padding: .6rem .9rem;
+       // font-size: 1.25rem;
+        line-height: inherit;
+        color: #fff;
+        text-transform: uppercase;
+        &:hover {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+      &:hover {
+        background: #386898;
+      }
+      &:hover .nav-submenu {
+        display: block !important;
+      }
+      &.active {
+        background: #386898;
+      }
+    }
+  }
 
+  &-submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    padding: 0 0 1rem;
+    margin: 0;
+    background: #fff;
+    min-width: 250px;
+    list-style: none;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.03);
+    &__item {
+      display: block;
+      &-link {
+        display: block;
+        padding: .3rem .9rem;
+        color: #b1b8cc;
+        &:hover {
+          color: #386898;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
 
 //// MAIN MENU
 //.main-menu {

@@ -5,6 +5,7 @@
     "/css/components/likes.css": "/css/components/likes.css",
     "/css/components/views.css": "/css/components/views.css",
     "/css/components/comments.css": "/css/components/comments.css",
+    "/css/components/users.css": "/css/components/users.css",
     "/css/admin/admin.css": "/css/admin/admin.css",
     "/css/admin/components/jq_minicolors.css": "/css/admin/components/jq_minicolors.css",
     "/js/components/modal.js": "/js/components/modal.js",

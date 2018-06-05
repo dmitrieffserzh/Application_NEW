@@ -14,6 +14,7 @@
         <link href="{{ asset('css/components/likes.css') }}" rel="stylesheet">
         <link href="{{ asset('css/components/views.css') }}" rel="stylesheet">
         <link href="{{ asset('css/components/comments.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/components/users.css') }}" rel="stylesheet">
         @stack('custom-styles')
 
         <!-- Scripts -->
