@@ -24,12 +24,9 @@
     {{--@endif--}}
 
 
-
-
-
 <div class="dropdown d-inline-block float-right">
     @if(Auth::guest())
-        <a href="{{ route('login') }}" class="ajax-modal component-user-top__link" data-toggle="modal"
+        <a href="{{ route('login') }}" class="ajax-modal nav-menu__item-link" data-toggle="modal"
         data-url="{{ route('login') }}" data-name="Войти" data-modal-size="modal-sm">Войти</a>
     @else
     <a class="" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

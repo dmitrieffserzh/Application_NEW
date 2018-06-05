@@ -10547,8 +10547,8 @@ body {
   right: 0;
   background: #fff;
   z-index: 100;
-  -webkit-box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
-          box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.03);
+          box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.03);
 }
 
 .header .brand {
